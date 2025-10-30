@@ -1,0 +1,36 @@
+{% extends 'bookings/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<section class="hero hero-bg hero-lg hero-home reveal-onload">
+    <div class="hero-content">
+        <h2>Modern hairstyles, crafted with care</h2>
+        <p>Choose your preferred stylist and time. Fast and easy.</p>
+        <a class="btn btn-primary" href="{% url 'book' %}">Book now</a>
+    </div>
+    
+</section>
+
+<section class="workers reveal">
+    <h3>Our Stylists</h3>
+    <ul class="card-list workers-grid">
+        {% for worker in workers %}
+        <li class="card worker-card">
+            {% if worker.photo %}
+            <img class="worker-photo" src="{{ worker.photo.url }}" alt="{{ worker.full_name }}" />
+            {% endif %}
+            <div class="card-title"><a href="{% url 'worker_detail' worker.id %}">{{ worker.full_name }}</a></div>
+            {% if worker.role %}<div class="worker-role">{{ worker.role }}</div>{% endif %}
+            {% if worker.bio %}<p class="worker-bio">{{ worker.bio }}</p>{% endif %}
+        </li>
+        {% empty %}
+        <li>No stylists available yet.</li>
+        {% endfor %}
+    </ul>
+    </ul>
+</section>
+{% endblock %}
+
+
+

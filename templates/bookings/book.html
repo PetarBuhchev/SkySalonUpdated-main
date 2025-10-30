@@ -1,0 +1,31 @@
+{% extends 'bookings/base.html' %}
+{% load static %}
+
+{% block title %}Book Appointment{% endblock %}
+
+{% block content %}
+<h2>Book an Appointment</h2>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li class="message">{{ message }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+<form method="post" class="form">
+    {% csrf_token %}
+    <div class="form-row">{{ form.worker.label_tag }} {{ form.worker }}</div>
+    <div class="form-row">{{ form.date.label_tag }} {{ form.date }}</div>
+    <div class="form-row">{{ form.time.label_tag }} {{ form.time }}</div>
+    <div class="form-row">{{ form.phone.label_tag }} {{ form.phone }}</div>
+    <div class="form-row">{{ form.email.label_tag }} {{ form.email }}</div>
+    <div class="form-row">{{ form.service.label_tag }} {{form.service }}</div>
+    {% if form.non_field_errors %}
+    <div class="form-error">{{ form.non_field_errors }}</div>
+    {% endif %}
+    <button class="btn btn-primary" type="submit">Confirm Booking</button>
+</form>
+{% endblock %}
+
+
+
