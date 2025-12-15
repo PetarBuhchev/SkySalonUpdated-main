@@ -2,3 +2,7 @@
 [2025-12-15 13:17:28,233] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
 [2025-12-15 13:18:02,317] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\salon_site\settings.py changed, reloading.
 [2025-12-15 13:18:03,761] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+TEST LOG ENTRY
+[2025-12-15 14:58:17,115] INFO bookings.management.commands.send_reminders:35 Preparing reminders
+[2025-12-15 14:58:17,118] INFO bookings.management.commands.send_reminders:90 Skipping SMS reminders; Twilio not configured or client unavailable
+[2025-12-15 15:11:04,694] INFO django.utils.autoreload:667 Watching for file changes with StatReloader

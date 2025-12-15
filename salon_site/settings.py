@@ -125,6 +125,8 @@ LOGGING = {
             "filename": str(LOG_FILE),
             "maxBytes": 5 * 1024 * 1024,  # 5 MB
             "backupCount": 3,
+            "encoding": "utf-8",
+            "delay": True,
             "level": LOG_LEVEL,
         },
     },

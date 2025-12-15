@@ -14,6 +14,10 @@ staticfiles/
 .venv/
 venv/
 
+# Logs
+logs/
+logs/*.log
+
 # OS / Editors
 .DS_Store
 Thumbs.db
