@@ -50,5 +50,6 @@ git push -u origin main
 - `.gitignore` excludes `db.sqlite3`, `media/`, envs, and editor files.
 - Calendar prevents past dates; click a slot to prefill booking.
 - Worker pages live at `/workers/<id>/`.
+- Logging goes to `logs/app.log` (rotating, 5 MB x3) and console. Control level with `DJANGO_LOG_LEVEL` (default `INFO`) and override directory with `DJANGO_LOG_DIR` if needed.
 
 

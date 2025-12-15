@@ -1,0 +1,4 @@
+[2025-12-15 13:14:22,507] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-15 13:17:28,233] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-15 13:18:02,317] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\salon_site\settings.py changed, reloading.
+[2025-12-15 13:18:03,761] INFO django.utils.autoreload:668 Watching for file changes with StatReloader

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import logging
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
@@ -8,6 +10,9 @@ from django.conf import settings
 
 from .forms import BookingForm
 from .models import Worker, WorkerServicePrice, Service, Booking
+
+
+logger = logging.getLogger(__name__)
 
 
 def home(request):
@@ -20,6 +25,16 @@ def book(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save()
+            logger.info(
+                "Booking created",
+                extra={
+                    "booking_id": booking.id,
+                    "worker_id": booking.worker_id,
+                    "service_id": booking.service_id,
+                    "date": str(booking.date),
+                    "time": booking.time.isoformat(),
+                },
+            )
             # Send confirmation email if provided
             if booking.email:
                 subject = "Your salon booking is confirmed"
@@ -27,9 +42,14 @@ def book(request):
                 try:
                     send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [booking.email], fail_silently=True)
                 except Exception:
-                    pass
+                    logger.exception(
+                        "Failed to send booking confirmation email",
+                        extra={"booking_id": booking.id, "email": booking.email},
+                    )
             messages.success(request, "Your booking is confirmed.")
             return redirect(reverse("booking_success") + f"?id={booking.id}")
+        else:
+            logger.warning("Booking form invalid", extra={"errors": form.errors})
     else:
         # Prefill from query parameters if provided
         initial = {}
@@ -130,7 +150,11 @@ def calendar_view(request):
             })
             
         except (ValueError, Worker.DoesNotExist):
-            pass
+            logger.warning(
+                "Invalid calendar parameters",
+                exc_info=True,
+                extra={"date": request.GET.get("date"), "worker": request.GET.get("worker")},
+            )
     
     # Default view - show worker and date selection
     workers = Worker.objects.filter(is_active=True)
