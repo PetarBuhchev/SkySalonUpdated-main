@@ -6,3 +6,10 @@ TEST LOG ENTRY
 [2025-12-15 14:58:17,115] INFO bookings.management.commands.send_reminders:35 Preparing reminders
 [2025-12-15 14:58:17,118] INFO bookings.management.commands.send_reminders:90 Skipping SMS reminders; Twilio not configured or client unavailable
 [2025-12-15 15:11:04,694] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-15 15:11:18,535] INFO django.server:213 "GET / HTTP/1.1" 200 2734
+[2025-12-15 15:11:18,628] INFO django.server:213 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2025-12-15 15:11:18,630] INFO django.server:213 "GET /static/css/styles.css HTTP/1.1" 200 4066
+[2025-12-15 15:11:18,636] INFO django.server:213 "GET /static/images/hero.jpg HTTP/1.1" 200 121541
+[2025-12-15 15:11:19,626] INFO django.server:213 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2025-12-15 15:11:19,628] WARNING django.server:213 "GET /favicon.ico HTTP/1.1" 404 4300
+[2025-12-15 15:11:36,463] INFO django.server:213 "GET /pricelist/ HTTP/1.1" 200 2877
