@@ -1,7 +1,9 @@
 from __future__ import annotations
 
-from django.db import models
+import datetime
+
 from django.core.validators import RegexValidator
+from django.db import models
 
 
 class Worker(models.Model):
@@ -10,6 +12,8 @@ class Worker(models.Model):
     role = models.CharField(max_length=100, blank=True)
     bio = models.TextField(blank=True)
     photo = models.ImageField(upload_to="workers/", blank=True, null=True)
+    working_hours_start = models.TimeField(default=datetime.time(9, 0))
+    working_hours_end = models.TimeField(default=datetime.time(18, 0))
 
     class Meta:
         ordering = ["full_name"]
@@ -55,36 +59,55 @@ class Booking(models.Model):
         """Calculate the end time of this booking based on service duration."""
         from datetime import datetime, timedelta
         start_datetime = datetime.combine(self.date, self.time)
-        # Use service duration if available, otherwise default to 60 minutes
-        duration = self.service.duration_minutes if self.service else 60
+        duration = self.get_duration_minutes()
         return start_datetime + timedelta(minutes=duration)
+
+    def get_duration_minutes(self) -> int:
+        """Return duration for this booking using worker-specific price if present."""
+        if self.worker and self.service:
+            price = WorkerServicePrice.objects.filter(worker=self.worker, service=self.service).first()
+            if price:
+                return price.duration_minutes
+            return self.service.duration_minutes
+        return 60
 
     @classmethod
     def has_conflict(cls, worker, date, time, service, exclude_booking=None):
         """Check if there's a time conflict for the given worker, date, time, and service."""
         from datetime import datetime, timedelta
-        
+
         # Calculate the end time for the new booking
         start_datetime = datetime.combine(date, time)
-        # Use service duration if available, otherwise default to 60 minutes
-        duration = service.duration_minutes if service else 60
+        # Use worker-specific duration when possible
+        duration = cls._duration_for_worker_service(worker, service)
         end_datetime = start_datetime + timedelta(minutes=duration)
-        
+
         # Get all existing bookings for this worker on this date
         existing_bookings = cls.objects.filter(worker=worker, date=date)
         if exclude_booking:
             existing_bookings = existing_bookings.exclude(id=exclude_booking.id)
-        
+
         # Check for conflicts
         for booking in existing_bookings:
             existing_start = datetime.combine(booking.date, booking.time)
-            existing_end = booking.end_time
-            
+            existing_duration = cls._duration_for_worker_service(worker, booking.service)
+            existing_end = existing_start + timedelta(minutes=existing_duration)
+
             # Check if the new booking overlaps with any existing booking
             if (start_datetime < existing_end and end_datetime > existing_start):
                 return True
-        
+
         return False
+
+    @staticmethod
+    def _duration_for_worker_service(worker: Worker, service: Service | None) -> int:
+        """Return duration minutes using worker-specific price when available."""
+        if worker and service:
+            price = WorkerServicePrice.objects.filter(worker=worker, service=service).first()
+            if price:
+                return price.duration_minutes
+            return service.duration_minutes
+        return 60
 
 
 class WorkerServicePrice(models.Model):

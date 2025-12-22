@@ -9,6 +9,7 @@ class WorkerAdmin(admin.ModelAdmin):
     search_fields = ("full_name", "role")
     fieldsets = (
         (None, {"fields": ("full_name", "role", "is_active")}),
+        ("Working hours", {"fields": ("working_hours_start", "working_hours_end")}),
         ("Profile", {"fields": ("photo", "bio")}),
     )
 
