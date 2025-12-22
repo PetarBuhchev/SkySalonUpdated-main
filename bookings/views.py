@@ -1,13 +1,22 @@
 from __future__ import annotations
 
-from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse
+import logging
+
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
+from django.utils import timezone
+
+from datetime import datetime, timedelta, date as date_cls, time as time_cls
+import calendar
 
 from .forms import BookingForm
 from .models import Worker, WorkerServicePrice, Service, Booking
+
+
+logger = logging.getLogger(__name__)
 
 
 def home(request):
@@ -20,6 +29,16 @@ def book(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save()
+            logger.info(
+                "Booking created",
+                extra={
+                    "booking_id": booking.id,
+                    "worker_id": booking.worker_id,
+                    "service_id": booking.service_id,
+                    "date": str(booking.date),
+                    "time": booking.time.isoformat(),
+                },
+            )
             # Send confirmation email if provided
             if booking.email:
                 subject = "Your salon booking is confirmed"
@@ -27,12 +46,17 @@ def book(request):
                 try:
                     send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [booking.email], fail_silently=True)
                 except Exception:
-                    pass
+                    logger.exception(
+                        "Failed to send booking confirmation email",
+                        extra={"booking_id": booking.id, "email": booking.email},
+                    )
             messages.success(request, "Your booking is confirmed.")
             return redirect(reverse("booking_success") + f"?id={booking.id}")
+        else:
+            logger.warning("Booking form invalid", extra={"errors": form.errors})
     else:
         # Prefill from query parameters if provided
-        initial = {}
+        initial: dict[str, object] = {}
         worker_id = request.GET.get("worker")
         date_param = request.GET.get("date")
         time_param = request.GET.get("time")
@@ -47,7 +71,49 @@ def book(request):
             initial["time"] = time_param
         form = BookingForm(initial=initial)
 
-    return render(request, "bookings/book.html", {"form": form})
+    # Derive selected worker/service/date/time for summary display
+    selected_worker = None
+    selected_service = None
+    selected_date = None
+    selected_time = None
+    calendar_month = None
+
+    try:
+        worker_value = form["worker"].value()
+        if worker_value:
+            selected_worker = Worker.objects.filter(id=worker_value).first()
+        service_value = form["service"].value()
+        if service_value:
+            selected_service = Service.objects.filter(id=service_value).first()
+        date_value = form["date"].value()
+        if date_value:
+            selected_date = datetime.fromisoformat(date_value).date()
+        time_value = form["time"].value()
+        if time_value:
+            # time input is HH:MM[:ss]
+            selected_time = datetime.fromisoformat(f"2000-01-01T{time_value}").time()
+        if selected_date:
+            calendar_month = selected_date.replace(day=1).strftime("%Y-%m")
+    except Exception:
+        # If anything goes wrong with parsing, just skip the summary
+        selected_worker = None
+        selected_service = None
+        selected_date = None
+        selected_time = None
+        calendar_month = None
+
+    return render(
+        request,
+        "bookings/book.html",
+        {
+            "form": form,
+            "selected_worker": selected_worker,
+            "selected_service": selected_service,
+            "selected_date": selected_date,
+            "selected_time": selected_time,
+            "calendar_month": calendar_month,
+        },
+    )
 
 
 def booking_success(request):
@@ -61,85 +127,168 @@ def pricelist(request):
 
 
 def calendar_view(request):
-    """Show available time slots for booking."""
-    from datetime import datetime, timedelta, time
-    from django.utils import timezone
-    import json
-    
-    # Get selected date and worker from request
-    selected_date = request.GET.get('date')
-    selected_worker_id = request.GET.get('worker')
-    
-    if selected_date and selected_worker_id:
-        try:
-            selected_date = datetime.strptime(selected_date, '%Y-%m-%d').date()
-            today = timezone.localdate()
-            # Do not allow viewing schedules for past dates
-            if selected_date < today:
-                selected_date = today
-            worker = Worker.objects.get(id=selected_worker_id, is_active=True)
-            
-            # Generate time slots (9 AM to 6 PM, 30-minute intervals)
-            time_slots = []
-            start_time = time(9, 0)  # 9:00 AM
-            end_time = time(18, 0)   # 6:00 PM
-            
-            current_time = start_time
-            while current_time < end_time:
-                time_slots.append(current_time)
-                # Add 30 minutes
-                current_time = (datetime.combine(selected_date, current_time) + timedelta(minutes=30)).time()
-            
-            # Get existing bookings for this worker on this date
-            existing_bookings = Booking.objects.filter(worker=worker, date=selected_date)
-            
-            # Check availability for each time slot
-            available_slots = []
-            for slot_time in time_slots:
-                is_available = True
-                for booking in existing_bookings:
-                    # Skip bookings without a service (legacy data)
-                    if booking.service is None:
-                        # For legacy bookings without service, assume 60 minutes duration
-                        from datetime import datetime, timedelta
-                        booking_start = datetime.combine(booking.date, booking.time)
-                        booking_end = booking_start + timedelta(minutes=60)
-                        slot_start = datetime.combine(selected_date, slot_time)
-                        slot_end = slot_start + timedelta(minutes=60)  # Default 60 minutes for new booking
-                        
-                        if (slot_start < booking_end and slot_end > booking_start):
-                            is_available = False
-                            break
-                    else:
-                        if Booking.has_conflict(worker, selected_date, slot_time, booking.service):
-                            is_available = False
-                            break
-                
-                available_slots.append({
-                    'time': slot_time.strftime('%H:%M'),
-                    'available': is_available
-                })
-            
-            return render(request, "bookings/calendar.html", {
-                'worker': worker,
-                'selected_date': selected_date,
-                'time_slots': available_slots,
-                'workers': Worker.objects.filter(is_active=True),
-                'services': Service.objects.all(),
-                'today': today,
-            })
-            
-        except (ValueError, Worker.DoesNotExist):
-            pass
-    
-    # Default view - show worker and date selection
+    """Month view calendar with worker/service availability coloring."""
+    today = timezone.localdate()
     workers = Worker.objects.filter(is_active=True)
-    from django.utils import timezone as _tz
-    return render(request, "bookings/calendar.html", {
-        'workers': workers,
-        'services': Service.objects.all(),
-        'today': _tz.localdate(),
-    })
+
+    worker_id = request.GET.get("worker")
+    service_id = request.GET.get("service")
+    selected_date_str = request.GET.get("date")
+    month_param = request.GET.get("month")
+
+    worker = None
+    selected_service = None
+    service_options = Service.objects.none()
+
+    if worker_id:
+        worker = get_object_or_404(workers, id=worker_id)
+        # Only services the worker offers (fall back to all if none configured)
+        worker_prices = WorkerServicePrice.objects.filter(worker=worker).select_related("service")
+        service_options = [wp.service for wp in worker_prices] or list(Service.objects.all())
+        if service_id:
+            try:
+                selected_service = next((svc for svc in service_options if str(svc.id) == service_id), None)
+            except StopIteration:
+                selected_service = None
+
+    # Resolve month
+    if month_param:
+        try:
+            year, month = month_param.split("-")
+            year = int(year)
+            month = int(month)
+            month_start = date_cls(year, month, 1)
+        except Exception:
+            month_start = today.replace(day=1)
+    else:
+        month_start = today.replace(day=1)
+
+    # Build weeks for display
+    cal = calendar.Calendar(firstweekday=0)
+    month_weeks = cal.monthdatescalendar(month_start.year, month_start.month)
+
+    service_duration = None
+    if worker and selected_service:
+        service_duration = Booking._duration_for_worker_service(worker, selected_service)
+
+    # Preload bookings for the month for the selected worker
+    bookings_by_date = {}
+    if worker:
+        month_end_day = calendar.monthrange(month_start.year, month_start.month)[1]
+        month_end = date_cls(month_start.year, month_start.month, month_end_day)
+        qs = (
+            Booking.objects.filter(worker=worker, date__gte=month_start, date__lte=month_end)
+            .select_related("service")
+            .order_by("time")
+        )
+        for booking in qs:
+            bookings_by_date.setdefault(booking.date, []).append(booking)
+
+    def _working_hours():
+        start = worker.working_hours_start if worker else time_cls(9, 0)
+        end = worker.working_hours_end if worker else time_cls(18, 0)
+        return start, end
+
+    def _slots_for_day(day: date_cls, duration: int):
+        """Return all potential start times for a day with 15-min granularity and availability flag."""
+        start_time, end_time = _working_hours()
+        start_dt = datetime.combine(day, start_time)
+        end_dt = datetime.combine(day, end_time)
+        if end_dt <= start_dt:
+            return []
+
+        last_start = end_dt - timedelta(minutes=duration)
+        if last_start < start_dt:
+            return []
+
+        local_now = timezone.localtime().replace(tzinfo=None)
+        slots: list[dict[str, object]] = []
+        slot = start_dt
+        day_bookings = bookings_by_date.get(day, [])
+
+        while slot <= last_start:
+            candidate_end = slot + timedelta(minutes=duration)
+            # Skip past times for current day
+            if slot.date() == local_now.date() and candidate_end <= local_now:
+                slot += timedelta(minutes=15)
+                continue
+
+            conflict = False
+            for booking in day_bookings:
+                existing_start = datetime.combine(day, booking.time)
+                existing_duration = Booking._duration_for_worker_service(worker, booking.service)
+                existing_end = existing_start + timedelta(minutes=existing_duration)
+                if slot < existing_end and candidate_end > existing_start:
+                    conflict = True
+                    break
+
+            slots.append(
+                {
+                    "time": slot.time().strftime("%H:%M"),
+                    "available": not conflict,
+                }
+            )
+            slot += timedelta(minutes=15)
+
+        return slots
+
+    # Build availability for each day in the month grid
+    calendar_days = []
+    for week in month_weeks:
+        week_days = []
+        for day in week:
+            in_month = day.month == month_start.month
+            status = "past"
+            if day < today:
+                status = "past"
+            elif worker and selected_service and in_month:
+                day_slots = _slots_for_day(day, service_duration)
+                has_slots = any(s["available"] for s in day_slots)
+                status = "available" if has_slots else "full"
+            else:
+                status = "idle"
+
+            week_days.append(
+                {
+                    "date": day,
+                    "in_month": in_month,
+                    "status": status,
+                    "is_today": day == today,
+                }
+            )
+        calendar_days.append(week_days)
+
+    # Selected date slots (optional detail below calendar)
+    selected_date = None
+    selected_slots: list[dict[str, object]] = []
+    if selected_date_str and worker and selected_service:
+        try:
+            selected_date = datetime.strptime(selected_date_str, "%Y-%m-%d").date()
+            selected_slots = _slots_for_day(selected_date, service_duration)
+        except ValueError:
+            selected_date = None
+
+    # Determine prev/next month params
+    prev_month = (month_start.replace(day=1) - timedelta(days=1)).replace(day=1)
+    next_month = (month_start + timedelta(days=32)).replace(day=1)
+
+    return render(
+        request,
+        "bookings/calendar.html",
+        {
+            "workers": workers,
+            "worker": worker,
+            "services": service_options,
+            "selected_service": selected_service,
+            "calendar_days": calendar_days,
+            "month_start": month_start,
+            "today": today,
+            "selected_date": selected_date,
+            "selected_slots": selected_slots,
+            "prev_month": prev_month,
+            "next_month": next_month,
+        },
+    )
 
 
 def worker_detail(request, worker_id: int):

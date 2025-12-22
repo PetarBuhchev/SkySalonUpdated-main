@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from datetime import timedelta
+import logging
+
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 from django.core.mail import send_mail
@@ -14,6 +16,9 @@ except Exception:  # pragma: no cover - optional dependency
     Client = None  # type: ignore
 
 
+logger = logging.getLogger(__name__)
+
+
 class Command(BaseCommand):
     help = "Send email/SMS reminders for appointments happening within the next 24 hours"
 
@@ -25,6 +30,15 @@ class Command(BaseCommand):
         qs = Booking.objects.filter(
             date__gte=start.date(),
             date__lte=end.date(),
+        )
+
+        logger.info(
+            "Preparing reminders",
+            extra={
+                "window_start": start.isoformat(),
+                "window_end": end.isoformat(),
+                "count": qs.count(),
+            },
         )
 
         # Build aware datetimes for comparison
@@ -41,8 +55,15 @@ class Command(BaseCommand):
                 body = f"Reminder: Your appointment with {booking.worker.full_name} is on {booking.date} at {booking.time}."
                 try:
                     send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [booking.email], fail_silently=True)
+                    logger.info(
+                        "Sent reminder email",
+                        extra={"booking_id": booking.id, "email": booking.email},
+                    )
                 except Exception:
-                    pass
+                    logger.exception(
+                        "Failed to send reminder email",
+                        extra={"booking_id": booking.id, "email": booking.email},
+                    )
 
         # SMS reminders via Twilio
         if Client and settings.TWILIO_ACCOUNT_SID and settings.TWILIO_AUTH_TOKEN and settings.TWILIO_FROM_NUMBER:
@@ -56,8 +77,17 @@ class Command(BaseCommand):
                             from_=settings.TWILIO_FROM_NUMBER,
                             to=booking.phone,
                         )
+                        logger.info(
+                            "Sent reminder SMS",
+                            extra={"booking_id": booking.id, "phone": booking.phone},
+                        )
                     except Exception:
-                        pass
+                        logger.exception(
+                            "Failed to send reminder SMS",
+                            extra={"booking_id": booking.id, "phone": booking.phone},
+                        )
+        else:
+            logger.info("Skipping SMS reminders; Twilio not configured or client unavailable")
 
         self.stdout.write(self.style.SUCCESS(f"Processed {len(reminders)} reminders"))
 

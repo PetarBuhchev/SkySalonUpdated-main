@@ -8,7 +8,7 @@ from .models import Booking, Worker, Service
 
 class BookingForm(forms.ModelForm):
     date = forms.DateField(widget=forms.DateInput(attrs={"type": "date"}))
-    time = forms.TimeField(widget=forms.TimeInput(attrs={"type": "time", "step": 1800}))
+    time = forms.TimeField(widget=forms.TimeInput(attrs={"type": "time", "step": 900}))
     worker = forms.ModelChoiceField(queryset=Worker.objects.filter(is_active=True), empty_label="Select a worker")
     service = forms.ModelChoiceField(queryset=Service.objects.all(), required=True, help_text="", empty_label="Select a service")
 

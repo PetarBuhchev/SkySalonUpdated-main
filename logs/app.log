@@ -1,0 +1,854 @@
+[2025-12-15 13:14:22,507] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-15 13:17:28,233] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-15 13:18:02,317] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\salon_site\settings.py changed, reloading.
+[2025-12-15 13:18:03,761] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+TEST LOG ENTRY
+[2025-12-15 14:58:17,115] INFO bookings.management.commands.send_reminders:35 Preparing reminders
+[2025-12-15 14:58:17,118] INFO bookings.management.commands.send_reminders:90 Skipping SMS reminders; Twilio not configured or client unavailable
+[2025-12-15 15:11:04,694] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-15 15:11:18,535] INFO django.server:213 "GET / HTTP/1.1" 200 2734
+[2025-12-15 15:11:18,628] INFO django.server:213 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2025-12-15 15:11:18,630] INFO django.server:213 "GET /static/css/styles.css HTTP/1.1" 200 4066
+[2025-12-15 15:11:18,636] INFO django.server:213 "GET /static/images/hero.jpg HTTP/1.1" 200 121541
+[2025-12-15 15:11:19,626] INFO django.server:213 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2025-12-15 15:11:19,628] WARNING django.server:213 "GET /favicon.ico HTTP/1.1" 404 4300
+[2025-12-15 15:11:36,463] INFO django.server:213 "GET /pricelist/ HTTP/1.1" 200 2877
+[2025-12-20 22:09:25,746] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-20 22:09:28,080] INFO django.server:213 "GET / HTTP/1.1" 200 2734
+[2025-12-20 22:09:28,191] INFO django.server:213 "GET /static/css/styles.css HTTP/1.1" 200 4066
+[2025-12-20 22:09:28,212] INFO django.server:213 "GET /static/images/hero.jpg HTTP/1.1" 200 121541
+[2025-12-20 22:09:28,216] INFO django.server:213 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2025-12-20 22:09:28,261] INFO django.server:213 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2025-12-20 22:09:28,263] WARNING django.server:213 "GET /favicon.ico HTTP/1.1" 404 4300
+[2025-12-20 22:09:29,746] INFO django.server:213 "GET /book/ HTTP/1.1" 200 3419
+[2025-12-22 09:46:08,137] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 09:46:14,417] INFO django.server:212 "GET / HTTP/1.1" 200 2734
+[2025-12-22 09:46:14,534] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4066
+[2025-12-22 09:46:14,549] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2025-12-22 09:46:14,552] INFO django.server:212 "GET /static/images/hero.jpg HTTP/1.1" 200 121541
+[2025-12-22 09:46:14,589] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2025-12-22 09:46:14,773] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2025-12-22 09:46:20,860] INFO django.server:212 "GET / HTTP/1.1" 200 2734
+[2025-12-22 09:46:20,941] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4066
+[2025-12-22 09:46:20,941] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2025-12-22 09:46:20,975] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2025-12-22 09:46:20,976] INFO django.server:212 "GET /static/images/hero.jpg HTTP/1.1" 200 121541
+[2025-12-22 09:46:30,809] INFO django.server:212 "GET / HTTP/1.1" 200 2734
+[2025-12-22 09:46:39,985] INFO django.server:212 "GET /book/ HTTP/1.1" 200 3382
+[2025-12-22 09:47:07,458] INFO bookings.views:28 Booking created
+[2025-12-22 09:47:07,467] INFO django.server:212 "POST /book/ HTTP/1.1" 302 0
+[2025-12-22 09:47:07,471] INFO django.server:212 "GET /booking-success/?id=3 HTTP/1.1" 200 918
+[2025-12-22 09:47:14,618] INFO django.server:212 "GET / HTTP/1.1" 200 2734
+[2025-12-22 09:47:15,972] INFO django.server:212 "GET /admin/ HTTP/1.1" 302 0
+[2025-12-22 09:47:16,061] INFO django.server:212 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4506
+[2025-12-22 09:47:16,110] INFO django.server:212 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[2025-12-22 09:47:16,110] INFO django.server:212 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[2025-12-22 09:47:16,111] INFO django.server:212 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[2025-12-22 09:47:16,111] INFO django.server:212 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[2025-12-22 09:47:16,113] INFO django.server:212 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[2025-12-22 09:47:16,131] INFO django.server:212 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2025-12-22 09:47:16,133] INFO django.server:212 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[2025-12-22 09:47:16,135] INFO django.server:212 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[2025-12-22 09:47:20,644] INFO django.server:212 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2025-12-22 09:47:20,681] INFO django.server:212 "GET /admin/ HTTP/1.1" 200 10220
+[2025-12-22 09:47:20,713] INFO django.server:212 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[2025-12-22 09:47:20,713] INFO django.server:212 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2025-12-22 09:47:20,714] INFO django.server:212 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2025-12-22 09:47:26,855] INFO django.server:212 "GET /admin/bookings/booking/ HTTP/1.1" 200 13876
+[2025-12-22 09:47:26,890] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 09:47:26,890] INFO django.server:212 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[2025-12-22 09:47:26,894] INFO django.server:212 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2025-12-22 09:47:26,901] INFO django.server:212 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[2025-12-22 09:47:26,917] INFO django.server:212 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[2025-12-22 09:47:26,920] INFO django.server:212 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2025-12-22 09:47:26,921] INFO django.server:212 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2025-12-22 09:47:26,924] INFO django.server:212 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2025-12-22 09:47:26,934] INFO django.server:212 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[2025-12-22 09:47:26,938] INFO django.server:212 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[2025-12-22 09:47:26,960] INFO django.server:212 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[2025-12-22 09:47:26,982] INFO django.server:212 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2025-12-22 09:47:27,001] INFO django.server:212 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[2025-12-22 09:47:27,001] INFO django.server:212 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2025-12-22 09:47:34,035] INFO django.server:212 "GET /admin/bookings/booking/3/change/ HTTP/1.1" 200 16036
+[2025-12-22 09:47:34,061] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 09:47:34,070] INFO django.server:212 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[2025-12-22 09:47:34,071] INFO django.server:212 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+[2025-12-22 09:47:34,072] INFO django.server:212 "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9114
+[2025-12-22 09:47:34,085] INFO django.server:212 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+[2025-12-22 09:47:34,095] INFO django.server:212 "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+[2025-12-22 09:47:34,096] INFO django.server:212 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+[2025-12-22 09:47:34,098] INFO django.server:212 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+[2025-12-22 09:47:34,101] INFO django.server:212 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[2025-12-22 09:47:34,110] INFO django.server:212 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[2025-12-22 09:47:34,117] INFO django.server:212 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2025-12-22 09:47:34,135] INFO django.server:212 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2025-12-22 09:47:34,145] INFO django.server:212 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+[2025-12-22 09:47:34,184] INFO django.server:212 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[2025-12-22 09:47:34,184] INFO django.server:212 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[2025-12-22 09:50:29,433] INFO django.server:212 "GET /admin/ HTTP/1.1" 200 10220
+[2025-12-22 09:50:31,418] INFO django.server:212 "GET /admin/bookings/service/ HTTP/1.1" 200 10774
+[2025-12-22 09:50:31,441] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:01:32,693] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:01:34,245] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:01:35,445] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:01:36,045] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:01:41,334] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:01:42,013] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:01:53,369] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:01:54,031] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:01:58,321] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\admin.py changed, reloading.
+[2025-12-22 10:01:59,026] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:02:06,431] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\forms.py changed, reloading.
+[2025-12-22 10:02:07,122] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:02:07,883] ERROR django.request:241 Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bookings_worker.working_hours_start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py", line 20, in home
+    return render(request, "bookings/home.html", {"workers": workers})
+  File "E:\Program Files\Python\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: bookings_worker.working_hours_start
+[2025-12-22 10:02:07,894] ERROR django.server:212 "GET / HTTP/1.1" 500 204325
+[2025-12-22 10:02:13,368] ERROR django.request:241 Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bookings_worker.working_hours_start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py", line 20, in home
+    return render(request, "bookings/home.html", {"workers": workers})
+  File "E:\Program Files\Python\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: bookings_worker.working_hours_start
+[2025-12-22 10:02:13,374] ERROR django.server:212 "GET / HTTP/1.1" 500 204462
+[2025-12-22 10:02:57,915] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 10:02:58,519] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:02:58,728] ERROR django.request:241 Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bookings_worker.working_hours_start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py", line 24, in home
+    return render(request, "bookings/home.html", {"workers": workers})
+  File "E:\Program Files\Python\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: bookings_worker.working_hours_start
+[2025-12-22 10:02:58,740] ERROR django.server:212 "GET / HTTP/1.1" 500 204310
+[2025-12-22 10:04:43,046] ERROR django.request:241 Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bookings_worker.working_hours_start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py", line 24, in home
+    return render(request, "bookings/home.html", {"workers": workers})
+  File "E:\Program Files\Python\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: bookings_worker.working_hours_start
+[2025-12-22 10:04:43,052] ERROR django.server:212 "GET / HTTP/1.1" 500 204310
+[2025-12-22 10:05:01,235] ERROR django.request:241 Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bookings_worker.working_hours_start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py", line 24, in home
+    return render(request, "bookings/home.html", {"workers": workers})
+  File "E:\Program Files\Python\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: bookings_worker.working_hours_start
+[2025-12-22 10:05:01,241] ERROR django.server:212 "GET / HTTP/1.1" 500 204310
+[2025-12-22 10:05:54,691] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 10:05:55,240] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:05:55,476] ERROR django.request:241 Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bookings_worker.working_hours_start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py", line 24, in home
+    return render(request, "bookings/home.html", {"workers": workers})
+  File "E:\Program Files\Python\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\template\defaulttags.py", line 194, in render
+    len_values = len(values)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "E:\Program Files\Python\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\Program Files\Python\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: bookings_worker.working_hours_start
+[2025-12-22 10:05:55,485] ERROR django.server:212 "GET / HTTP/1.1" 500 204310
+[2025-12-22 10:08:33,799] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:08:33,990] INFO django.server:212 "GET / HTTP/1.1" 200 2734
+[2025-12-22 10:08:37,239] INFO django.server:212 "GET / HTTP/1.1" 200 2734
+[2025-12-22 10:08:38,673] INFO django.server:212 "GET /book/ HTTP/1.1" 200 3381
+[2025-12-22 10:08:46,665] INFO django.server:212 "GET /book/ HTTP/1.1" 200 3381
+[2025-12-22 10:08:47,288] INFO django.server:212 "GET /book/ HTTP/1.1" 200 3381
+[2025-12-22 10:08:50,193] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 5890
+[2025-12-22 10:08:52,170] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6402
+[2025-12-22 10:08:54,267] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=1 HTTP/1.1" 200 12594
+[2025-12-22 10:08:58,268] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-24 HTTP/1.1" 200 20883
+[2025-12-22 10:09:11,343] INFO django.server:212 "GET / HTTP/1.1" 200 2734
+[2025-12-22 10:09:12,049] INFO django.server:212 "GET /admin/ HTTP/1.1" 200 10220
+[2025-12-22 10:09:14,184] INFO django.server:212 "GET /admin/bookings/booking/ HTTP/1.1" 200 13876
+[2025-12-22 10:09:14,210] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:09:17,852] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 20190
+[2025-12-22 10:14:05,940] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 20127
+[2025-12-22 10:14:13,890] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 10:14:14,559] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:14:14,989] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 25096
+[2025-12-22 10:14:16,835] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 10:14:17,511] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:14:17,911] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 25096
+[2025-12-22 10:14:25,988] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16640
+[2025-12-22 10:14:33,075] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16981
+[2025-12-22 10:14:52,141] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 10:14:52,620] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:14:52,928] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16981
+[2025-12-22 10:15:05,088] INFO django.server:212 "GET / HTTP/1.1" 200 2671
+[2025-12-22 10:15:06,157] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6168
+[2025-12-22 10:15:07,604] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6680
+[2025-12-22 10:15:09,374] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=2 HTTP/1.1" 200 12872
+[2025-12-22 10:15:11,462] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16283
+[2025-12-22 10:15:32,246] INFO django.server:212 "GET /book/?worker=1&service=2&date=2025-12-23&time=13:30 HTTP/1.1" 200 3351
+[2025-12-22 10:15:41,813] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6168
+[2025-12-22 10:15:43,293] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6680
+[2025-12-22 10:15:44,836] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=2 HTTP/1.1" 200 12872
+[2025-12-22 10:15:50,745] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16283
+[2025-12-22 10:16:02,455] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=1 HTTP/1.1" 200 12872
+[2025-12-22 10:16:03,931] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16981
+[2025-12-22 10:16:08,087] INFO django.server:212 "GET /book/?worker=1&service=1&date=2025-12-23&time=14:00 HTTP/1.1" 200 3351
+[2025-12-22 10:17:56,728] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 10:17:57,311] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:17:57,479] INFO django.server:212 "GET /book/?worker=1&service=1&date=2025-12-23&time=14:00 HTTP/1.1" 200 3351
+[2025-12-22 10:18:11,814] INFO django.server:212 "GET /book/?worker=1&service=1&date=2025-12-23&time=14:00 HTTP/1.1" 200 4428
+[2025-12-22 10:18:23,862] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 10:18:24,446] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:18:24,605] INFO django.server:212 "GET /book/?worker=1&service=1&date=2025-12-23&time=14:00 HTTP/1.1" 200 4428
+[2025-12-22 10:21:21,449] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6168
+[2025-12-22 10:21:22,994] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6680
+[2025-12-22 10:21:24,697] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=2 HTTP/1.1" 200 12872
+[2025-12-22 10:21:26,574] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16283
+[2025-12-22 10:21:28,558] INFO django.server:212 "GET /book/?worker=1&service=2&date=2025-12-23&time=13:30 HTTP/1.1" 200 4430
+[2025-12-22 10:21:30,412] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12 HTTP/1.1" 200 12872
+[2025-12-22 10:21:32,468] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16283
+[2025-12-22 10:21:33,892] INFO django.server:212 "GET /book/?worker=1&service=2&date=2025-12-23&time=13:00 HTTP/1.1" 200 4430
+[2025-12-22 10:21:35,275] INFO django.server:212 "GET /calendar/?worker=1&service=2&date=2025-12-23&month=2025-12 HTTP/1.1" 200 16283
+[2025-12-22 10:21:37,462] INFO django.server:212 "GET /book/?worker=1&service=2&date=2025-12-23&time=13:30 HTTP/1.1" 200 4430
+[2025-12-22 10:21:43,579] INFO django.server:212 "GET /admin/auth/user/ HTTP/1.1" 200 12121
+[2025-12-22 10:21:43,601] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:21:45,983] INFO django.server:212 "GET /admin/bookings/worker/ HTTP/1.1" 200 11143
+[2025-12-22 10:21:46,003] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:21:47,007] INFO django.server:212 "GET /admin/bookings/worker/1/change/ HTTP/1.1" 200 13690
+[2025-12-22 10:21:47,029] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:21:54,232] INFO django.server:212 "POST /admin/bookings/worker/1/change/ HTTP/1.1" 302 0
+[2025-12-22 10:21:54,247] INFO django.server:212 "GET /admin/bookings/worker/ HTTP/1.1" 200 11350
+[2025-12-22 10:21:54,274] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:21:56,457] INFO django.server:212 "GET /book/?worker=1&service=2&date=2025-12-23&time=13:30 HTTP/1.1" 200 4433
+[2025-12-22 10:22:03,964] INFO django.server:212 "GET / HTTP/1.1" 200 2674
+[2025-12-22 10:23:04,156] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6171
+[2025-12-22 10:23:31,493] INFO django.server:212 "GET / HTTP/1.1" 200 2674
+[2025-12-22 10:23:48,037] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6171
+[2025-12-22 10:23:51,043] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6686
+[2025-12-22 10:23:54,228] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=2 HTTP/1.1" 200 12878
+[2025-12-22 10:23:56,869] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16292
+[2025-12-22 10:24:00,637] INFO django.server:212 "GET /book/?worker=1&service=2&date=2025-12-23&time=13:30 HTTP/1.1" 200 4433
+[2025-12-22 10:24:06,797] INFO bookings.views:32 Booking created
+[2025-12-22 10:24:06,803] INFO django.server:212 "POST /book/?worker=1&service=2&date=2025-12-23&time=13:30 HTTP/1.1" 302 0
+[2025-12-22 10:24:06,824] INFO django.server:212 "GET /booking-success/?id=4 HTTP/1.1" 200 918
+[2025-12-22 10:29:21,983] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:29:22,755] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:29:23,058] INFO django.server:212 "GET /booking-success/?id=4 HTTP/1.1" 200 918
+[2025-12-22 10:33:20,097] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:33:20,553] INFO django.server:213 "GET /booking-success/?id=4 HTTP/1.1" 200 918
+[2025-12-22 10:33:24,107] INFO django.server:213 "GET / HTTP/1.1" 200 2674
+[2025-12-22 10:33:25,004] INFO django.server:213 "GET /calendar/ HTTP/1.1" 200 6171
+[2025-12-22 10:33:26,318] INFO django.server:213 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6686
+[2025-12-22 10:33:27,469] INFO django.server:213 "GET /calendar/?month=2025-12&worker=1&service=1 HTTP/1.1" 200 12878
+[2025-12-22 10:33:29,587] INFO django.server:213 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16750
+[2025-12-22 10:33:30,791] INFO django.server:213 "GET /book/?worker=1&service=1&date=2025-12-23&time=10:30 HTTP/1.1" 200 4567
+[2025-12-22 10:33:32,890] INFO django.server:213 "GET /calendar/?worker=1&service=1&month=2025-12 HTTP/1.1" 200 12878
+[2025-12-22 10:33:34,073] INFO django.server:213 "GET / HTTP/1.1" 200 2674
+[2025-12-22 10:33:34,627] INFO django.server:213 "GET /pricelist/ HTTP/1.1" 200 2817
+[2025-12-22 10:33:47,054] INFO django.server:213 "GET /admin/bookings/worker/add/ HTTP/1.1" 200 14963
+[2025-12-22 10:33:47,107] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:34:49,292] INFO django.server:213 "POST /admin/bookings/worker/add/ HTTP/1.1" 302 0
+[2025-12-22 10:34:49,365] INFO django.server:213 "GET /admin/bookings/worker/ HTTP/1.1" 200 13390
+[2025-12-22 10:34:49,394] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:34:55,396] INFO django.server:213 "GET /admin/ HTTP/1.1" 200 12921
+[2025-12-22 10:34:56,358] INFO django.server:213 "GET / HTTP/1.1" 200 2893
+[2025-12-22 10:34:57,412] INFO django.server:213 "GET /calendar/ HTTP/1.1" 200 6242
+[2025-12-22 10:34:59,010] INFO django.server:213 "GET /calendar/?month=&worker=2 HTTP/1.1" 200 6758
+[2025-12-22 10:35:04,328] INFO django.server:213 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 13621
+[2025-12-22 10:35:04,352] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:09,429] INFO django.server:213 "GET /admin/bookings/service/ HTTP/1.1" 200 12227
+[2025-12-22 10:35:09,452] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:10,806] INFO django.server:213 "GET /admin/bookings/service/add/ HTTP/1.1" 200 12188
+[2025-12-22 10:35:10,828] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:22,014] INFO django.server:213 "POST /admin/bookings/service/add/ HTTP/1.1" 302 0
+[2025-12-22 10:35:22,028] INFO django.server:213 "GET /admin/bookings/service/ HTTP/1.1" 200 12729
+[2025-12-22 10:35:22,054] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:27,204] INFO django.server:213 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 13684
+[2025-12-22 10:35:27,227] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:29,577] INFO django.server:213 "GET /admin/bookings/workerserviceprice/add/ HTTP/1.1" 200 15559
+[2025-12-22 10:35:29,604] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:30,866] INFO django.server:213 "GET /admin/autocomplete/?app_label=bookings&model_name=workerserviceprice&field_name=worker HTTP/1.1" 200 111
+[2025-12-22 10:35:32,199] INFO django.server:213 "GET /admin/autocomplete/?app_label=bookings&model_name=workerserviceprice&field_name=service HTTP/1.1" 200 152
+[2025-12-22 10:35:36,212] INFO django.server:213 "POST /admin/bookings/workerserviceprice/add/ HTTP/1.1" 302 0
+[2025-12-22 10:35:36,228] INFO django.server:213 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 14346
+[2025-12-22 10:35:36,249] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:41,548] INFO django.server:213 "GET /calendar/?month=&worker=2 HTTP/1.1" 200 6635
+[2025-12-22 10:35:43,298] INFO django.server:213 "GET /calendar/?month=2025-12&worker=2&service=3 HTTP/1.1" 200 12827
+[2025-12-22 10:35:45,088] INFO django.server:213 "GET /calendar/?worker=2&service=3&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16532
+[2025-12-22 10:35:50,530] INFO django.server:213 "GET /book/?worker=2&service=3&date=2025-12-23&time=14:00 HTTP/1.1" 200 4461
+[2025-12-22 10:35:55,211] INFO bookings.views:32 Booking created
+[2025-12-22 10:35:55,219] INFO django.server:213 "POST /book/?worker=2&service=3&date=2025-12-23&time=14:00 HTTP/1.1" 302 0
+[2025-12-22 10:35:55,223] INFO django.server:213 "GET /booking-success/?id=5 HTTP/1.1" 200 918
+[2025-12-22 10:35:56,321] INFO django.server:213 "GET / HTTP/1.1" 200 2893
+[2025-12-22 10:35:57,065] INFO django.server:213 "GET /calendar/ HTTP/1.1" 200 6242
+[2025-12-22 10:35:58,654] INFO django.server:213 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6757
+[2025-12-22 10:36:00,059] INFO django.server:213 "GET /calendar/?month=2025-12&worker=1&service=2 HTTP/1.1" 200 12949
+[2025-12-22 10:36:01,244] INFO django.server:213 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16123
+[2025-12-22 10:36:09,815] INFO django.server:213 "GET /admin/bookings/service/ HTTP/1.1" 200 12660
+[2025-12-22 10:36:09,839] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:36:10,281] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 17262
+[2025-12-22 10:36:10,306] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:36:36,299] INFO django.server:213 "GET /admin/bookings/booking/2/change/ HTTP/1.1" 200 17426
+[2025-12-22 10:36:36,324] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:36:38,380] INFO django.server:213 "GET /admin/bookings/booking/2/delete/ HTTP/1.1" 200 9865
+[2025-12-22 10:36:38,468] INFO django.server:213 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[2025-12-22 10:36:40,882] INFO django.server:213 "POST /admin/bookings/booking/2/delete/ HTTP/1.1" 302 0
+[2025-12-22 10:36:40,901] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16866
+[2025-12-22 10:36:40,928] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:40:49,698] INFO django.utils.autoreload:265 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:40:50,610] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:40:51,134] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16686
+[2025-12-22 10:40:51,153] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:40:54,195] INFO django.utils.autoreload:265 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:40:54,839] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:40:55,224] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16686
+[2025-12-22 10:40:55,240] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:41:01,147] INFO django.utils.autoreload:265 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:41:01,763] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:41:02,205] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16686
+[2025-12-22 10:41:02,230] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
