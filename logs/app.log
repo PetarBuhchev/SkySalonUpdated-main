@@ -779,3 +779,76 @@ django.db.utils.OperationalError: no such column: bookings_worker.working_hours_
 [2025-12-22 10:29:21,983] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
 [2025-12-22 10:29:22,755] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
 [2025-12-22 10:29:23,058] INFO django.server:212 "GET /booking-success/?id=4 HTTP/1.1" 200 918
+[2025-12-22 10:33:20,097] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:33:20,553] INFO django.server:213 "GET /booking-success/?id=4 HTTP/1.1" 200 918
+[2025-12-22 10:33:24,107] INFO django.server:213 "GET / HTTP/1.1" 200 2674
+[2025-12-22 10:33:25,004] INFO django.server:213 "GET /calendar/ HTTP/1.1" 200 6171
+[2025-12-22 10:33:26,318] INFO django.server:213 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6686
+[2025-12-22 10:33:27,469] INFO django.server:213 "GET /calendar/?month=2025-12&worker=1&service=1 HTTP/1.1" 200 12878
+[2025-12-22 10:33:29,587] INFO django.server:213 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16750
+[2025-12-22 10:33:30,791] INFO django.server:213 "GET /book/?worker=1&service=1&date=2025-12-23&time=10:30 HTTP/1.1" 200 4567
+[2025-12-22 10:33:32,890] INFO django.server:213 "GET /calendar/?worker=1&service=1&month=2025-12 HTTP/1.1" 200 12878
+[2025-12-22 10:33:34,073] INFO django.server:213 "GET / HTTP/1.1" 200 2674
+[2025-12-22 10:33:34,627] INFO django.server:213 "GET /pricelist/ HTTP/1.1" 200 2817
+[2025-12-22 10:33:47,054] INFO django.server:213 "GET /admin/bookings/worker/add/ HTTP/1.1" 200 14963
+[2025-12-22 10:33:47,107] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:34:49,292] INFO django.server:213 "POST /admin/bookings/worker/add/ HTTP/1.1" 302 0
+[2025-12-22 10:34:49,365] INFO django.server:213 "GET /admin/bookings/worker/ HTTP/1.1" 200 13390
+[2025-12-22 10:34:49,394] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:34:55,396] INFO django.server:213 "GET /admin/ HTTP/1.1" 200 12921
+[2025-12-22 10:34:56,358] INFO django.server:213 "GET / HTTP/1.1" 200 2893
+[2025-12-22 10:34:57,412] INFO django.server:213 "GET /calendar/ HTTP/1.1" 200 6242
+[2025-12-22 10:34:59,010] INFO django.server:213 "GET /calendar/?month=&worker=2 HTTP/1.1" 200 6758
+[2025-12-22 10:35:04,328] INFO django.server:213 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 13621
+[2025-12-22 10:35:04,352] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:09,429] INFO django.server:213 "GET /admin/bookings/service/ HTTP/1.1" 200 12227
+[2025-12-22 10:35:09,452] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:10,806] INFO django.server:213 "GET /admin/bookings/service/add/ HTTP/1.1" 200 12188
+[2025-12-22 10:35:10,828] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:22,014] INFO django.server:213 "POST /admin/bookings/service/add/ HTTP/1.1" 302 0
+[2025-12-22 10:35:22,028] INFO django.server:213 "GET /admin/bookings/service/ HTTP/1.1" 200 12729
+[2025-12-22 10:35:22,054] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:27,204] INFO django.server:213 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 13684
+[2025-12-22 10:35:27,227] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:29,577] INFO django.server:213 "GET /admin/bookings/workerserviceprice/add/ HTTP/1.1" 200 15559
+[2025-12-22 10:35:29,604] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:30,866] INFO django.server:213 "GET /admin/autocomplete/?app_label=bookings&model_name=workerserviceprice&field_name=worker HTTP/1.1" 200 111
+[2025-12-22 10:35:32,199] INFO django.server:213 "GET /admin/autocomplete/?app_label=bookings&model_name=workerserviceprice&field_name=service HTTP/1.1" 200 152
+[2025-12-22 10:35:36,212] INFO django.server:213 "POST /admin/bookings/workerserviceprice/add/ HTTP/1.1" 302 0
+[2025-12-22 10:35:36,228] INFO django.server:213 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 14346
+[2025-12-22 10:35:36,249] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:35:41,548] INFO django.server:213 "GET /calendar/?month=&worker=2 HTTP/1.1" 200 6635
+[2025-12-22 10:35:43,298] INFO django.server:213 "GET /calendar/?month=2025-12&worker=2&service=3 HTTP/1.1" 200 12827
+[2025-12-22 10:35:45,088] INFO django.server:213 "GET /calendar/?worker=2&service=3&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16532
+[2025-12-22 10:35:50,530] INFO django.server:213 "GET /book/?worker=2&service=3&date=2025-12-23&time=14:00 HTTP/1.1" 200 4461
+[2025-12-22 10:35:55,211] INFO bookings.views:32 Booking created
+[2025-12-22 10:35:55,219] INFO django.server:213 "POST /book/?worker=2&service=3&date=2025-12-23&time=14:00 HTTP/1.1" 302 0
+[2025-12-22 10:35:55,223] INFO django.server:213 "GET /booking-success/?id=5 HTTP/1.1" 200 918
+[2025-12-22 10:35:56,321] INFO django.server:213 "GET / HTTP/1.1" 200 2893
+[2025-12-22 10:35:57,065] INFO django.server:213 "GET /calendar/ HTTP/1.1" 200 6242
+[2025-12-22 10:35:58,654] INFO django.server:213 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6757
+[2025-12-22 10:36:00,059] INFO django.server:213 "GET /calendar/?month=2025-12&worker=1&service=2 HTTP/1.1" 200 12949
+[2025-12-22 10:36:01,244] INFO django.server:213 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16123
+[2025-12-22 10:36:09,815] INFO django.server:213 "GET /admin/bookings/service/ HTTP/1.1" 200 12660
+[2025-12-22 10:36:09,839] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:36:10,281] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 17262
+[2025-12-22 10:36:10,306] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:36:36,299] INFO django.server:213 "GET /admin/bookings/booking/2/change/ HTTP/1.1" 200 17426
+[2025-12-22 10:36:36,324] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:36:38,380] INFO django.server:213 "GET /admin/bookings/booking/2/delete/ HTTP/1.1" 200 9865
+[2025-12-22 10:36:38,468] INFO django.server:213 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[2025-12-22 10:36:40,882] INFO django.server:213 "POST /admin/bookings/booking/2/delete/ HTTP/1.1" 302 0
+[2025-12-22 10:36:40,901] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16866
+[2025-12-22 10:36:40,928] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:40:49,698] INFO django.utils.autoreload:265 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:40:50,610] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:40:51,134] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16686
+[2025-12-22 10:40:51,153] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:40:54,195] INFO django.utils.autoreload:265 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:40:54,839] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:40:55,224] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16686
+[2025-12-22 10:40:55,240] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:41:01,147] INFO django.utils.autoreload:265 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\models.py changed, reloading.
+[2025-12-22 10:41:01,763] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 10:41:02,205] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16686
+[2025-12-22 10:41:02,230] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
