@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="container">
+    <header class="header">
+        <h1 class="brand">Salon</h1>
+        <nav>
+            <a class="btn" href="{% url 'home' %}">Home</a>
+            <a class="btn btn-primary" href="{% url 'book' %}">Make another booking</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Thank you!</h2>
+        <p>Your booking has been confirmed. We will contact you at the provided phone number if needed.</p>
+    </main>
+
+    <footer class="footer">© {{ now|date:"Y" }} Salon</footer>
+</body>
+</html>
+
+
+
+
