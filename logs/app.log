@@ -852,3 +852,459 @@ django.db.utils.OperationalError: no such column: bookings_worker.working_hours_
 [2025-12-22 10:41:01,763] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
 [2025-12-22 10:41:02,205] INFO django.server:213 "GET /admin/bookings/booking/ HTTP/1.1" 200 16686
 [2025-12-22 10:41:02,230] INFO django.server:213 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-12-22 10:54:40,870] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 10:54:51,760] INFO django.server:212 "GET / HTTP/1.1" 200 2893
+[2025-12-22 10:54:53,009] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6242
+[2025-12-22 10:54:54,206] INFO django.server:212 "GET /calendar/?month=&worker=2 HTTP/1.1" 200 6635
+[2025-12-22 10:54:55,344] INFO django.server:212 "GET /calendar/?month=2025-12&worker=2&service=3 HTTP/1.1" 200 12827
+[2025-12-22 10:54:59,315] INFO django.server:212 "GET /calendar/?month=2025-12&worker=2&service=3 HTTP/1.1" 200 12827
+[2025-12-22 10:55:00,307] INFO django.server:212 "GET /calendar/?worker=2&service=3&month=2026-01 HTTP/1.1" 200 14045
+[2025-12-22 10:55:01,013] INFO django.server:212 "GET /calendar/?worker=2&service=3&month=2026-02 HTTP/1.1" 200 13730
+[2025-12-22 10:55:01,565] INFO django.server:212 "GET /calendar/?worker=2&service=3&month=2026-03 HTTP/1.1" 200 14748
+[2025-12-22 10:55:02,504] INFO django.server:212 "GET / HTTP/1.1" 200 2893
+[2025-12-22 10:55:03,201] INFO django.server:212 "GET /pricelist/ HTTP/1.1" 200 3338
+[2025-12-22 10:55:10,863] INFO django.server:212 "GET /admin/bookings/worker/ HTTP/1.1" 200 11484
+[2025-12-22 10:55:10,889] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:12,482] INFO django.server:212 "GET /admin/bookings/worker/2/change/ HTTP/1.1" 200 13705
+[2025-12-22 10:55:12,512] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:23,472] INFO django.server:212 "POST /admin/bookings/worker/2/change/ HTTP/1.1" 302 0
+[2025-12-22 10:55:23,485] INFO django.server:212 "GET /admin/bookings/worker/ HTTP/1.1" 200 11717
+[2025-12-22 10:55:23,511] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:24,838] INFO django.server:212 "GET /admin/bookings/worker/2/change/ HTTP/1.1" 200 13751
+[2025-12-22 10:55:24,864] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:27,493] INFO django.server:212 "POST /admin/bookings/worker/2/change/ HTTP/1.1" 302 0
+[2025-12-22 10:55:27,507] INFO django.server:212 "GET /admin/bookings/worker/2/change/ HTTP/1.1" 200 13994
+[2025-12-22 10:55:27,528] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:28,835] INFO django.server:212 "POST /admin/bookings/worker/2/change/ HTTP/1.1" 302 0
+[2025-12-22 10:55:28,848] INFO django.server:212 "GET /admin/bookings/worker/ HTTP/1.1" 200 11717
+[2025-12-22 10:55:28,877] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:29,684] INFO django.server:212 "GET /admin/bookings/worker/1/change/ HTTP/1.1" 200 13702
+[2025-12-22 10:55:29,708] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:36,180] INFO django.server:212 "POST /admin/bookings/worker/1/change/ HTTP/1.1" 302 0
+[2025-12-22 10:55:36,193] INFO django.server:212 "GET /admin/bookings/worker/ HTTP/1.1" 200 11726
+[2025-12-22 10:55:36,224] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:38,061] INFO django.server:212 "GET /admin/bookings/service/ HTTP/1.1" 200 11021
+[2025-12-22 10:55:38,087] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:39,556] INFO django.server:212 "GET /admin/bookings/booking/ HTTP/1.1" 200 14830
+[2025-12-22 10:55:39,582] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:40,705] INFO django.server:212 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 12324
+[2025-12-22 10:55:40,727] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:42,398] INFO django.server:212 "GET /admin/bookings/workerserviceprice/3/change/ HTTP/1.1" 200 14593
+[2025-12-22 10:55:42,429] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:43,438] INFO django.server:212 "GET /admin/autocomplete/?app_label=bookings&model_name=workerserviceprice&field_name=service HTTP/1.1" 200 152
+[2025-12-22 10:55:44,714] INFO django.server:212 "GET /admin/bookings/service/ HTTP/1.1" 200 11021
+[2025-12-22 10:55:44,731] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:45,771] INFO django.server:212 "GET /admin/bookings/service/1/change/ HTTP/1.1" 200 11133
+[2025-12-22 10:55:45,802] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:50,956] INFO django.server:212 "POST /admin/bookings/service/1/change/ HTTP/1.1" 302 0
+[2025-12-22 10:55:50,971] INFO django.server:212 "GET /admin/bookings/service/ HTTP/1.1" 200 11276
+[2025-12-22 10:55:51,002] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:51,868] INFO django.server:212 "GET /admin/bookings/service/2/change/ HTTP/1.1" 200 11141
+[2025-12-22 10:55:51,895] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:55:59,244] INFO django.server:212 "POST /admin/bookings/service/2/change/ HTTP/1.1" 302 0
+[2025-12-22 10:55:59,257] INFO django.server:212 "GET /admin/bookings/service/ HTTP/1.1" 200 11300
+[2025-12-22 10:55:59,289] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:56:01,893] INFO django.server:212 "GET /admin/bookings/service/3/change/ HTTP/1.1" 200 11101
+[2025-12-22 10:56:01,924] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:56:06,050] INFO django.server:212 "POST /admin/bookings/service/3/change/ HTTP/1.1" 302 0
+[2025-12-22 10:56:06,069] INFO django.server:212 "GET /admin/bookings/service/ HTTP/1.1" 200 11286
+[2025-12-22 10:56:06,097] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:56:09,694] INFO django.server:212 "GET /admin/bookings/workerserviceprice/ HTTP/1.1" 200 12430
+[2025-12-22 10:56:09,721] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 10:56:13,534] INFO django.server:212 "GET /pricelist/ HTTP/1.1" 200 3408
+[2025-12-22 10:56:16,539] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 10:56:19,348] INFO django.server:212 "GET /workers/2/ HTTP/1.1" 200 3847
+[2025-12-22 10:56:22,093] INFO django.server:212 "GET /calendar/?worker=2&date=2025-12-22 HTTP/1.1" 200 6670
+[2025-12-22 10:56:23,940] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 10:56:26,621] INFO django.server:212 "GET /workers/2/ HTTP/1.1" 200 3847
+[2025-12-22 10:56:27,863] INFO django.server:212 "GET /book/?worker=2 HTTP/1.1" 200 3976
+[2025-12-22 11:15:42,677] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 11:15:43,369] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2025-12-22 11:15:44,667] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2025-12-22 11:15:48,780] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 11:15:56,123] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2025-12-22 11:15:59,818] INFO django.server:212 "GET /calendar/?month=&worker=2 HTTP/1.1" 200 6670
+[2025-12-22 15:43:49,318] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 15:43:54,742] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 15:43:55,070] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2025-12-22 15:43:56,198] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2025-12-22 15:44:01,476] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:44:01,481] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6826
+[2025-12-22 15:44:06,030] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:44:06,100] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=1 HTTP/1.1" 200 13018
+[2025-12-22 15:44:13,562] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:44:13,674] INFO bookings.views:315 Calendar slots calculated
+[2025-12-22 15:44:13,679] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16920
+[2025-12-22 15:44:45,460] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2025-12-22 15:44:46,042] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 15:44:46,218] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:44:46,356] INFO bookings.views:315 Calendar slots calculated
+[2025-12-22 15:44:46,373] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16920
+[2025-12-22 15:45:51,894] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 15:46:36,632] INFO django.utils.autoreload:667 Watching for file changes with StatReloader
+[2025-12-22 15:47:01,621] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2025-12-22 15:47:04,867] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 15:47:05,100] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2025-12-22 15:47:35,715] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2025-12-22 15:47:41,133] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:47:41,140] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6826
+[2025-12-22 15:47:51,243] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:47:51,300] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=1 HTTP/1.1" 200 13018
+[2025-12-22 15:48:05,421] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:48:05,541] INFO bookings.views:315 Calendar slots calculated
+[2025-12-22 15:48:05,546] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16920
+[2025-12-22 15:48:17,915] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2025-12-22 15:48:18,966] INFO django.server:212 "GET /admin/ HTTP/1.1" 200 10818
+[2025-12-22 15:48:19,122] INFO django.server:212 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[2025-12-22 15:48:20,329] INFO django.server:212 "GET /admin/bookings/booking/ HTTP/1.1" 200 14958
+[2025-12-22 15:48:20,363] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-12-22 15:48:58,865] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:48:58,949] INFO django.server:212 "GET /calendar/?month=2025-12&worker=1&service=2 HTTP/1.1" 200 13018
+[2025-12-22 15:49:00,179] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:49:00,261] INFO bookings.views:315 Calendar slots calculated
+[2025-12-22 15:49:00,265] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-22 HTTP/1.1" 200 9802
+[2025-12-22 15:49:01,654] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:49:01,716] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12 HTTP/1.1" 200 13018
+[2025-12-22 15:49:02,429] INFO bookings.views:183 Calendar viewed for worker
+[2025-12-22 15:49:02,536] INFO bookings.views:315 Calendar slots calculated
+[2025-12-22 15:49:02,541] INFO django.server:212 "GET /calendar/?worker=1&service=2&month=2025-12&date=2025-12-23 HTTP/1.1" 200 16222
+[2026-01-02 01:01:22,870] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2026-01-02 01:01:26,441] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:01:26,496] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 304 0
+[2026-01-02 01:01:26,623] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4127
+[2026-01-02 01:01:26,632] INFO django.server:212 "GET /static/images/hero.jpg HTTP/1.1" 304 0
+[2026-01-02 01:01:26,680] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 304 0
+[2026-01-02 01:01:27,014] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-02 01:02:06,448] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2026-01-02 01:02:37,693] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2026-01-02 01:02:41,800] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2026-01-02 01:03:26,825] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2026-01-02 01:03:28,973] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:04:28,380] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:04:29,996] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:04:31,431] INFO django.server:212 "GET /pricelist/ HTTP/1.1" 200 3408
+[2026-01-02 01:04:32,451] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2026-01-02 01:04:33,609] INFO django.server:212 "GET /pricelist/ HTTP/1.1" 200 3408
+[2026-01-02 01:04:34,404] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:05:08,935] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:02,791] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:02,901] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-02 01:31:02,917] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:07,236] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:13,397] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:15,548] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:17,515] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:17,660] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:28,652] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:29,207] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:29,363] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:29,500] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:29,593] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:29,717] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:29,835] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:31:34,643] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-02 01:33:01,498] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-02 01:33:01,542] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4145
+[2026-01-02 01:33:01,602] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-02 01:33:01,608] INFO django.server:212 "GET /static/images/hero.jpg HTTP/1.1" 200 121541
+[2026-01-02 01:33:01,655] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-02 01:33:01,726] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-03 21:12:07,020] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2026-01-03 21:12:09,873] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-03 21:12:10,058] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4145
+[2026-01-03 21:12:10,094] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-03 21:12:10,121] INFO django.server:212 "GET /static/images/hero.jpg HTTP/1.1" 200 121541
+[2026-01-03 21:12:10,263] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-03 21:12:10,591] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-04 15:24:13,562] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2026-01-04 15:24:14,970] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-04 15:24:15,023] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-04 15:24:15,355] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-04 15:24:19,622] INFO django.server:212 "GET /workers/1/ HTTP/1.1" 200 4140
+[2026-01-04 15:24:32,010] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2026-01-04 15:24:33,952] INFO bookings.views:183 Calendar viewed for worker
+[2026-01-04 15:24:33,956] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6826
+[2026-01-04 15:24:35,771] INFO bookings.views:183 Calendar viewed for worker
+[2026-01-04 15:24:35,797] INFO django.server:212 "GET /calendar/?month=2026-01&worker=1&service=1 HTTP/1.1" 200 14062
+[2026-01-04 15:24:38,034] INFO bookings.views:183 Calendar viewed for worker
+[2026-01-04 15:24:38,056] INFO bookings.views:315 Calendar slots calculated
+[2026-01-04 15:24:38,062] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2026-01&date=2026-01-15 HTTP/1.1" 200 17338
+[2026-01-04 15:24:39,739] INFO bookings.views:29 Booking page viewed
+[2026-01-04 15:24:39,803] INFO django.server:212 "GET /book/?worker=1&service=1&date=2026-01-15&time=12:00 HTTP/1.1" 200 4460
+[2026-01-04 15:24:45,638] INFO bookings.views:42 Booking created
+[2026-01-04 15:24:45,638] INFO bookings.views:54 Sending booking confirmation email
+[2026-01-04 15:24:45,646] INFO bookings.views:71 Booking process completed successfully
+[2026-01-04 15:24:45,647] INFO django.server:212 "POST /book/?worker=1&service=1&date=2026-01-15&time=12:00 HTTP/1.1" 302 0
+[2026-01-04 15:24:45,653] INFO bookings.views:151 Booking success page viewed
+[2026-01-04 15:24:45,655] INFO django.server:212 "GET /booking-success/?id=6 HTTP/1.1" 200 918
+[2026-01-04 15:24:48,039] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-04 15:24:49,153] INFO django.server:212 "GET /admin/ HTTP/1.1" 200 10950
+[2026-01-04 15:24:49,398] INFO django.server:212 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[2026-01-04 15:24:49,401] INFO django.server:212 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[2026-01-04 15:24:49,402] INFO django.server:212 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[2026-01-04 15:24:49,403] INFO django.server:212 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[2026-01-04 15:24:49,406] INFO django.server:212 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[2026-01-04 15:24:49,428] INFO django.server:212 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2026-01-04 15:24:49,428] INFO django.server:212 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2026-01-04 15:24:49,429] INFO django.server:212 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[2026-01-04 15:24:49,429] INFO django.server:212 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2026-01-04 15:24:49,432] INFO django.server:212 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[2026-01-04 15:24:49,442] INFO django.server:212 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[2026-01-04 15:24:51,460] INFO django.server:212 "GET /admin/bookings/booking/ HTTP/1.1" 200 15498
+[2026-01-04 15:24:51,496] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2026-01-04 15:24:51,502] INFO django.server:212 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[2026-01-04 15:24:51,512] INFO django.server:212 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2026-01-04 15:24:51,519] INFO django.server:212 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[2026-01-04 15:24:51,533] INFO django.server:212 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[2026-01-04 15:24:51,542] INFO django.server:212 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2026-01-04 15:24:51,551] INFO django.server:212 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2026-01-04 15:24:51,555] INFO django.server:212 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2026-01-04 15:24:51,563] INFO django.server:212 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[2026-01-04 15:24:51,572] INFO django.server:212 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[2026-01-04 15:24:51,603] INFO django.server:212 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[2026-01-04 15:24:51,623] INFO django.server:212 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2026-01-04 15:24:51,645] INFO django.server:212 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2026-01-04 15:24:51,645] INFO django.server:212 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[2026-01-04 15:24:56,790] INFO django.server:212 "GET /admin/bookings/booking/6/change/ HTTP/1.1" 200 16102
+[2026-01-04 15:24:56,829] INFO django.server:212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2026-01-04 15:24:56,836] INFO django.server:212 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[2026-01-04 15:24:56,841] INFO django.server:212 "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9114
+[2026-01-04 15:24:56,842] INFO django.server:212 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+[2026-01-04 15:24:56,859] INFO django.server:212 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+[2026-01-04 15:24:56,867] INFO django.server:212 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[2026-01-04 15:24:56,876] INFO django.server:212 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+[2026-01-04 15:24:56,884] INFO django.server:212 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+[2026-01-04 15:24:56,890] INFO django.server:212 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[2026-01-04 15:24:56,905] INFO django.server:212 "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+[2026-01-04 15:24:56,907] INFO django.server:212 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2026-01-04 15:24:56,935] INFO django.server:212 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+[2026-01-04 15:24:56,940] INFO django.server:212 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2026-01-04 15:24:57,002] INFO django.server:212 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[2026-01-04 15:24:57,006] INFO django.server:212 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[2026-01-04 15:25:00,594] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:28:37,000] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2026-01-05 14:28:37,521] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:28:37,571] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:28:38,032] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-05 14:28:40,841] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:31:44,151] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:34:36,430] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:16,312] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:21,442] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:27,086] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:28,310] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:28,498] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:28,694] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:28,880] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:29,059] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:29,220] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:29,396] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:56,265] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:35:57,465] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:14,712] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:21,917] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:29,098] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:29,643] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:30,468] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:30,619] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:30,782] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:36:30,936] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:39:09,387] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2026-01-05 14:39:09,855] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:39:12,761] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:41:35,757] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:41:36,955] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:41:37,110] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:41:37,247] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:42:12,902] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6259
+[2026-01-05 14:42:13,078] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4145
+[2026-01-05 14:42:13,107] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:42:13,154] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-05 14:42:13,162] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 14:42:15,001] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:42:15,093] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 14:42:33,994] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:42:34,026] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:42:34,026] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4145
+[2026-01-05 14:42:34,125] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 14:42:34,157] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-05 14:42:36,361] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 14:42:36,401] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4145
+[2026-01-05 14:42:36,403] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:42:36,556] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 14:42:36,623] WARNING django.server:212 "GET /favicon.ico HTTP/1.1" 404 3600
+[2026-01-05 14:45:00,176] INFO django.server:212 "GET / HTTP/1.1" 200 2931
+[2026-01-05 14:45:00,221] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:45:00,239] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 304 0
+[2026-01-05 14:45:06,302] INFO django.server:212 "GET / HTTP/1.1" 200 2941
+[2026-01-05 14:45:12,448] INFO django.server:212 "GET / HTTP/1.1" 200 2939
+[2026-01-05 14:45:18,598] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:45:19,358] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:46:13,885] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:46:13,927] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4229
+[2026-01-05 14:46:13,939] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 304 0
+[2026-01-05 14:46:22,081] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:46:22,118] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4247
+[2026-01-05 14:46:30,238] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:46:30,278] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4247
+[2026-01-05 14:48:03,363] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:48:03,395] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4247
+[2026-01-05 14:48:03,407] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 304 0
+[2026-01-05 14:50:05,459] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:50:05,492] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:50:05,501] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 304 0
+[2026-01-05 14:50:09,175] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:50:19,753] INFO django.server:212 "GET /calendar/ HTTP/1.1" 200 6293
+[2026-01-05 14:50:19,812] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:50:22,284] INFO bookings.views:183 Calendar viewed for worker
+[2026-01-05 14:50:22,297] INFO django.server:212 "GET /calendar/?month=&worker=1 HTTP/1.1" 200 6860
+[2026-01-05 14:50:24,237] INFO bookings.views:183 Calendar viewed for worker
+[2026-01-05 14:50:24,329] INFO django.server:212 "GET /calendar/?month=2026-01&worker=1&service=1 HTTP/1.1" 200 14038
+[2026-01-05 14:50:27,426] INFO bookings.views:183 Calendar viewed for worker
+[2026-01-05 14:50:27,530] INFO bookings.views:315 Calendar slots calculated
+[2026-01-05 14:50:27,544] INFO django.server:212 "GET /calendar/?worker=1&service=1&month=2026-01&date=2026-01-13 HTTP/1.1" 200 17372
+[2026-01-05 14:50:28,827] INFO bookings.views:29 Booking page viewed
+[2026-01-05 14:50:28,981] INFO django.server:212 "GET /book/?worker=1&service=1&date=2026-01-13&time=09:00 HTTP/1.1" 200 4494
+[2026-01-05 14:50:33,443] WARNING bookings.views:80 Booking form invalid
+[2026-01-05 14:50:33,453] INFO django.server:212 "POST /book/?worker=1&service=1&date=2026-01-13&time=09:00 HTTP/1.1" 200 4539
+[2026-01-05 14:50:33,489] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:50:35,538] WARNING bookings.views:80 Booking form invalid
+[2026-01-05 14:50:35,552] INFO django.server:212 "POST /book/?worker=1&service=1&date=2026-01-13&time=09:00 HTTP/1.1" 200 4539
+[2026-01-05 14:50:37,853] WARNING bookings.views:80 Booking form invalid
+[2026-01-05 14:50:37,863] INFO django.server:212 "POST /book/?worker=1&service=1&date=2026-01-13&time=09:00 HTTP/1.1" 200 4539
+[2026-01-05 14:50:38,544] WARNING bookings.views:80 Booking form invalid
+[2026-01-05 14:50:38,551] INFO django.server:212 "POST /book/?worker=1&service=1&date=2026-01-13&time=09:00 HTTP/1.1" 200 4539
+[2026-01-05 14:50:44,163] INFO bookings.views:42 Booking created
+[2026-01-05 14:50:44,164] INFO bookings.views:54 Sending booking confirmation email
+[2026-01-05 14:50:44,190] INFO bookings.views:71 Booking process completed successfully
+[2026-01-05 14:50:44,194] INFO django.server:212 "POST /book/?worker=1&service=1&date=2026-01-13&time=09:00 HTTP/1.1" 302 0
+[2026-01-05 14:50:44,203] INFO bookings.views:151 Booking success page viewed
+[2026-01-05 14:50:44,206] INFO django.server:212 "GET /booking-success/?id=7 HTTP/1.1" 200 918
+[2026-01-05 14:50:46,238] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:50:50,308] INFO django.server:212 "GET /pricelist/ HTTP/1.1" 200 3442
+[2026-01-05 14:50:50,356] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:50:55,351] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:51:26,907] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:51:26,952] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:52:21,792] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:52:53,129] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:52:53,172] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:52:53,190] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 304 0
+[2026-01-05 14:53:02,416] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:53:25,532] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:53:25,605] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4247
+[2026-01-05 14:53:25,616] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:53:25,643] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:53:25,678] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 14:53:25,780] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 14:53:29,590] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:53:29,628] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:53:42,941] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:53:42,981] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4247
+[2026-01-05 14:53:43,952] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:53:43,991] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4247
+[2026-01-05 14:53:46,015] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:53:46,052] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4247
+[2026-01-05 14:53:55,260] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:53:55,302] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:54:49,610] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:54:49,658] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4245
+[2026-01-05 14:54:49,666] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:54:49,680] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:54:49,710] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 14:54:49,777] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 14:54:52,696] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:54:52,751] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4245
+[2026-01-05 14:54:52,755] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:54:52,775] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:54:52,810] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 14:54:52,886] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 14:56:44,177] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 14:56:44,235] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:58:46,725] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:58:46,773] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4245
+[2026-01-05 14:58:46,793] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:58:46,817] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:58:46,854] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 14:58:46,966] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 14:59:22,712] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 14:59:22,762] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4245
+[2026-01-05 14:59:22,769] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 14:59:22,821] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 14:59:22,838] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 14:59:22,922] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:00:05,591] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 15:00:05,650] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4245
+[2026-01-05 15:00:05,653] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 15:00:05,670] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:00:05,714] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 15:00:05,855] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:00:10,731] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 15:00:10,772] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 15:00:12,790] INFO django.server:212 "GET / HTTP/1.1" 200 2957
+[2026-01-05 15:03:25,485] INFO django.server:212 "GET / HTTP/1.1" 200 3251
+[2026-01-05 15:03:25,517] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 15:03:25,554] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 304 0
+[2026-01-05 15:03:27,550] INFO django.server:212 "GET / HTTP/1.1" 200 3251
+[2026-01-05 15:03:28,817] INFO django.server:212 "GET / HTTP/1.1" 200 3251
+[2026-01-05 15:03:30,653] INFO django.server:212 "GET / HTTP/1.1" 200 3251
+[2026-01-05 15:04:00,751] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 15:04:00,796] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:04:30,247] INFO django.server:212 "GET / HTTP/1.1" 200 3251
+[2026-01-05 15:04:30,289] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4245
+[2026-01-05 15:04:30,295] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 15:04:30,320] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:04:30,404] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 15:04:30,498] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:04:42,379] INFO django.server:212 "GET / HTTP/1.1" 200 3251
+[2026-01-05 15:05:43,792] INFO django.server:212 "GET / HTTP/1.1" 200 3266
+[2026-01-05 15:05:43,826] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4246
+[2026-01-05 15:05:45,846] INFO django.server:212 "GET / HTTP/1.1" 200 3268
+[2026-01-05 15:05:47,909] INFO django.server:212 "GET / HTTP/1.1" 200 3272
+[2026-01-05 15:05:51,994] INFO django.server:212 "GET / HTTP/1.1" 200 3327
+[2026-01-05 15:05:52,023] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 15:05:52,030] INFO django.server:212 "GET /static/images/logo.png HTTP/1.1" 200 26477
+[2026-01-05 15:05:59,147] INFO django.server:212 "GET / HTTP/1.1" 200 3329
+[2026-01-05 15:05:59,176] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 15:06:01,270] INFO django.server:212 "GET / HTTP/1.1" 200 2092
+[2026-01-05 15:06:02,215] INFO django.server:212 "GET / HTTP/1.1" 200 2092
+[2026-01-05 15:06:03,236] INFO django.server:212 "GET / HTTP/1.1" 200 3332
+[2026-01-05 15:06:18,345] INFO django.server:212 "GET / HTTP/1.1" 200 3332
+[2026-01-05 15:06:18,382] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 15:07:46,151] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 304 0
+[2026-01-05 15:07:46,189] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:08:08,391] INFO django.server:212 "GET / HTTP/1.1" 200 3332
+[2026-01-05 15:08:08,449] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4246
+[2026-01-05 15:08:08,454] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:08:08,456] INFO django.server:212 "GET /static/images/logo.png HTTP/1.1" 200 26819
+[2026-01-05 15:08:08,503] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 15:08:08,525] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 15:08:08,618] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:08:59,662] INFO django.server:212 "GET / HTTP/1.1" 200 3464
+[2026-01-05 15:08:59,707] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:08:59,707] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4246
+[2026-01-05 15:08:59,710] INFO django.server:212 "GET /static/images/logo.png HTTP/1.1" 200 26819
+[2026-01-05 15:08:59,747] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 15:08:59,766] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 15:08:59,852] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:09:00,749] INFO django.server:212 "GET / HTTP/1.1" 200 3464
+[2026-01-05 15:09:00,841] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4246
+[2026-01-05 15:09:00,847] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:09:00,850] INFO django.server:212 "GET /static/images/logo.png HTTP/1.1" 200 26819
+[2026-01-05 15:09:00,856] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 15:09:00,910] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 15:09:00,962] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:09:05,842] INFO django.server:212 "GET / HTTP/1.1" 200 3383
+[2026-01-05 15:09:05,892] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:09:05,899] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4246
+[2026-01-05 15:09:05,907] INFO django.server:212 "GET /static/images/logo.png HTTP/1.1" 200 26819
+[2026-01-05 15:09:05,948] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 15:09:05,970] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 15:09:06,028] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:09:07,880] INFO django.server:212 "GET / HTTP/1.1" 200 3383
+[2026-01-05 15:09:07,942] WARNING django.server:212 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+[2026-01-05 15:09:07,946] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4246
+[2026-01-05 15:09:07,948] INFO django.server:212 "GET /static/images/logo.png HTTP/1.1" 200 26819
+[2026-01-05 15:09:07,988] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+[2026-01-05 15:09:08,009] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+[2026-01-05 15:09:08,083] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760

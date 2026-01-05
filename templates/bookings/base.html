@@ -6,15 +6,29 @@
     <title>{% block title %}Salon{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script>
+      // Disable browser scroll restoration
+      if (history.scrollRestoration) {
+          history.scrollRestoration = 'manual';
+      }
+
+      // Optional: Force scroll to top on page load
+      window.onload = function() {
+          window.scrollTo(0, 0);
+      };
+  </script>
 </head>
 <body class="site">
     <header class="header header-fixed">
         <div class="container header-inner">
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <a href="{% url 'home' %}" class="logo-link">
+              <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+          </a>
             <nav class="nav" id="site-nav">
-                <a class="nav-link" href="{% url 'home' %}">Home</a>
-                <a class="nav-link" href="{% url 'pricelist' %}">Price List</a>
-                <a class="btn btn-primary" href="{% url 'calendar' %}">Book Now</a>
+                <a class="nav-link" href="{% url 'home' %}">Начало</a>
+                <a class="nav-link" href="{% url 'pricelist' %}">Ценоразпис</a>
+                <a class="btn btn-primary" href="{% url 'calendar' %}">Запази си час</a>
             </nav>
         </div>
     </header>

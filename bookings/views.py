@@ -25,6 +25,16 @@ def home(request):
 
 
 def book(request):
+    if request.method == "GET":
+        logger.info(
+            "Booking page viewed",
+            extra={
+                "path": request.get_full_path(),
+                "method": request.method,
+                "user": getattr(request.user, "id", None),
+            },
+        )
+
     if request.method == "POST":
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -41,6 +51,13 @@ def book(request):
             )
             # Send confirmation email if provided
             if booking.email:
+                logger.info(
+                    "Sending booking confirmation email",
+                    extra={
+                        "booking_id": booking.id,
+                        "email": booking.email,
+                    },
+                )
                 subject = "Your salon booking is confirmed"
                 body = f"Thank you! Your booking with {booking.worker.full_name} is on {booking.date} at {booking.time}."
                 try:
@@ -51,9 +68,22 @@ def book(request):
                         extra={"booking_id": booking.id, "email": booking.email},
                     )
             messages.success(request, "Your booking is confirmed.")
+            logger.info(
+                "Booking process completed successfully",
+                extra={
+                    "booking_id": booking.id,
+                    "redirect_to": reverse("booking_success"),
+                },
+            )
             return redirect(reverse("booking_success") + f"?id={booking.id}")
         else:
-            logger.warning("Booking form invalid", extra={"errors": form.errors})
+            logger.warning(
+                "Booking form invalid",
+                extra={
+                    "errors": form.errors,
+                    "path": request.get_full_path(),
+                },
+            )
     else:
         # Prefill from query parameters if provided
         initial: dict[str, object] = {}
@@ -117,6 +147,14 @@ def book(request):
 
 
 def booking_success(request):
+    booking_id = request.GET.get("id")
+    logger.info(
+        "Booking success page viewed",
+        extra={
+            "booking_id": booking_id,
+            "path": request.get_full_path(),
+        },
+    )
     return render(request, "bookings/success.html")
 
 
@@ -142,6 +180,15 @@ def calendar_view(request):
 
     if worker_id:
         worker = get_object_or_404(workers, id=worker_id)
+        logger.info(
+            "Calendar viewed for worker",
+            extra={
+                "worker_id": worker.id,
+                "service_id": service_id,
+                "selected_date": selected_date_str,
+                "month_param": month_param,
+            },
+        )
         # Only services the worker offers (fall back to all if none configured)
         worker_prices = WorkerServicePrice.objects.filter(worker=worker).select_related("service")
         service_options = [wp.service for wp in worker_prices] or list(Service.objects.all())
@@ -265,6 +312,15 @@ def calendar_view(request):
         try:
             selected_date = datetime.strptime(selected_date_str, "%Y-%m-%d").date()
             selected_slots = _slots_for_day(selected_date, service_duration)
+            logger.info(
+                "Calendar slots calculated",
+                extra={
+                    "worker_id": worker.id,
+                    "service_id": selected_service.id,
+                    "selected_date": str(selected_date),
+                    "available_slots_count": len([s for s in selected_slots if s["available"]]),
+                },
+            )
         except ValueError:
             selected_date = None
 
