@@ -1308,3 +1308,13 @@ django.db.utils.OperationalError: no such column: bookings_worker.working_hours_
 [2026-01-05 15:09:07,988] INFO django.server:212 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
 [2026-01-05 15:09:08,009] INFO django.server:212 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
 [2026-01-05 15:09:08,083] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
+[2026-01-05 15:23:25,515] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\salon_site\settings.py changed, reloading.
+[2026-01-05 15:23:26,886] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2026-01-05 15:23:27,400] INFO django.server:212 "GET / HTTP/1.1" 200 2923
+[2026-01-05 15:23:27,523] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4127
+[2026-01-05 15:23:50,912] INFO django.utils.autoreload:266 D:\CursorProjects\SkySalonUpdated-main\SkySalonUpdated-main\bookings\views.py changed, reloading.
+[2026-01-05 15:23:52,056] INFO django.utils.autoreload:668 Watching for file changes with StatReloader
+[2026-01-05 15:23:52,489] INFO django.server:212 "GET / HTTP/1.1" 200 3383
+[2026-01-05 15:23:52,640] INFO django.server:212 "GET /static/css/styles.css HTTP/1.1" 200 4246
+[2026-01-05 15:23:52,675] INFO django.server:212 "GET /static/images/logo.png HTTP/1.1" 200 26819
+[2026-01-05 15:23:52,715] INFO django.server:212 "GET /static/images/hero.png HTTP/1.1" 200 6497760
