@@ -3,7 +3,9 @@ from __future__ import annotations
 import datetime
 
 from django.core.validators import RegexValidator
+from django.core.signing import Signer
 from django.db import models
+from django.conf import settings
 
 
 class Worker(models.Model):
@@ -108,6 +110,23 @@ class Booking(models.Model):
                 return price.duration_minutes
             return service.duration_minutes
         return 60
+
+    def get_cancellation_token(self) -> str:
+        """Generate a secure cancellation token for this booking."""
+        signer = Signer()
+        return signer.sign(f"booking_{self.id}")
+
+    @classmethod
+    def from_cancellation_token(cls, token: str):
+        """Retrieve a booking from a cancellation token."""
+        try:
+            signer = Signer()
+            unsigned = signer.unsign(token)
+            if unsigned.startswith("booking_"):
+                booking_id = int(unsigned.split("_")[1])
+                return cls.objects.get(id=booking_id)
+        except (ValueError, cls.DoesNotExist, Exception):
+            return None
 
 
 class WorkerServicePrice(models.Model):

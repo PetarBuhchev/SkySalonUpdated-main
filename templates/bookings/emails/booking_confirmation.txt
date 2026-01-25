@@ -1,0 +1,16 @@
+Thank you for booking with us!
+
+Your booking details:
+- Worker: {{ worker.full_name }}
+{% if service %}- Service: {{ service.name }}{% endif %}
+- Date: {{ date|date:"F j, Y" }}
+- Time: {{ time|time:"H:i" }}
+
+If you need to cancel or modify your appointment, please use the following link:
+{{ cancellation_url }}
+
+We look forward to seeing you!
+
+Best regards,
+The Salon Team
+

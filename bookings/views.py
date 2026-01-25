@@ -3,11 +3,12 @@ from __future__ import annotations
 import logging
 
 from django.contrib import messages
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
 from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
+from django.template.loader import render_to_string
 
 from datetime import datetime, timedelta, date as date_cls, time as time_cls
 import calendar
@@ -59,9 +60,40 @@ def book(request):
                     },
                 )
                 subject = "Your salon booking is confirmed"
-                body = f"Thank you! Your booking with {booking.worker.full_name} is on {booking.date} at {booking.time}."
+                
+                # Generate cancellation token
+                cancellation_token = booking.get_cancellation_token()
+                cancellation_url = request.build_absolute_uri(
+                    reverse("cancel_booking", args=[cancellation_token])
+                )
+                
+                # Prepare email context
+                email_context = {
+                    "booking": booking,
+                    "worker": booking.worker,
+                    "service": booking.service,
+                    "date": booking.date,
+                    "time": booking.time,
+                    "cancellation_url": cancellation_url,
+                }
+                
+                # Render plain text version
+                text_content = render_to_string("bookings/emails/booking_confirmation.txt", email_context)
+                
+                # Render HTML version
+                html_content = render_to_string("bookings/emails/booking_confirmation.html", email_context)
+                
+                # Create email message
+                msg = EmailMultiAlternatives(
+                    subject=subject,
+                    body=text_content,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[booking.email],
+                )
+                msg.attach_alternative(html_content, "text/html")
+                
                 try:
-                    send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [booking.email], fail_silently=True)
+                    msg.send(fail_silently=True)
                 except Exception:
                     logger.exception(
                         "Failed to send booking confirmation email",
@@ -356,6 +388,78 @@ def worker_detail(request, worker_id: int):
         'worker': worker,
         'prices': prices,
         'today': timezone.localdate(),
+    })
+
+
+def cancel_booking(request, token: str):
+    """Cancel a booking using a secure token."""
+    booking = Booking.from_cancellation_token(token)
+    
+    if not booking:
+        logger.warning(
+            "Invalid cancellation token attempted",
+            extra={"token": token[:20] + "..." if len(token) > 20 else token},
+        )
+        messages.error(request, "Invalid cancellation link. Please contact us if you need to cancel your booking.")
+        return redirect(reverse("home"))
+    
+    # Check if booking is in the past
+    booking_datetime = timezone.make_aware(datetime.combine(booking.date, booking.time))
+    if booking_datetime < timezone.now():
+        messages.error(request, "This booking is in the past and cannot be cancelled.")
+        return redirect(reverse("home"))
+    
+    if request.method == "POST":
+        # Save booking details before deletion
+        booking_details = {
+            "booking_id": booking.id,
+            "worker": booking.worker.full_name,
+            "date": str(booking.date),
+            "time": booking.time.isoformat(),
+            "email": booking.email,
+        }
+        
+        # Delete the booking
+        booking.delete()
+        
+        logger.info(
+            "Booking cancelled",
+            extra=booking_details,
+        )
+        
+        # Send cancellation confirmation email if email was provided
+        if booking_details["email"]:
+            try:
+                subject = "Your salon booking has been cancelled"
+                text_content = f"Your booking with {booking_details['worker']} on {booking_details['date']} at {booking_details['time']} has been cancelled."
+                html_content = f"""
+                <html>
+                <body>
+                    <p>Your booking with {booking_details['worker']} on {booking_details['date']} at {booking_details['time']} has been cancelled.</p>
+                    <p>If you have any questions, please contact us.</p>
+                </body>
+                </html>
+                """
+                msg = EmailMultiAlternatives(
+                    subject=subject,
+                    body=text_content,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[booking_details["email"]],
+                )
+                msg.attach_alternative(html_content, "text/html")
+                msg.send(fail_silently=True)
+            except Exception:
+                logger.exception(
+                    "Failed to send cancellation confirmation email",
+                    extra={"email": booking_details["email"]},
+                )
+        
+        messages.success(request, "Your booking has been cancelled successfully.")
+        return redirect(reverse("home"))
+    
+    # GET request - show confirmation page
+    return render(request, "bookings/cancel_booking.html", {
+        "booking": booking,
     })
 
 

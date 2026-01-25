@@ -271,3 +271,7 @@ class BookingFormTest(TestCase):
         self.assertEqual(form["date"].value(), self.future_date)
         self.assertEqual(form["time"].value(), self.future_time)
 
+
+
+
+
