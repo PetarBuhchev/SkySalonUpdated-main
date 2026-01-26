@@ -3,6 +3,13 @@ from __future__ import annotations
 from pathlib import Path
 import os
 
+# Try to load environment variables from .env file if python-dotenv is installed
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, use environment variables directly
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-insecure-change-me")
@@ -60,7 +67,10 @@ DATABASES = {
 }
 
 # Email configuration (override via environment variables)
-EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend" if DEBUG else "django.core.mail.backends.smtp.EmailBackend")
+# Use SMTP backend if email credentials are provided, otherwise use console backend for development
+has_email_credentials = bool(os.environ.get("EMAIL_HOST_USER") and os.environ.get("EMAIL_HOST_PASSWORD"))
+default_email_backend = "django.core.mail.backends.smtp.EmailBackend" if has_email_credentials else "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND", default_email_backend)
 EMAIL_HOST = os.environ.get("EMAIL_HOST", "smtp.gmail.com")
 EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")

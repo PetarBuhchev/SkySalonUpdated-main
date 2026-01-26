@@ -1,28 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Confirmed</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-</head>
-<body class="container">
-    <header class="header">
-        <h1 class="brand">Salon</h1>
-        <nav>
-            <a class="btn" href="{% url 'home' %}">Home</a>
-            <a class="btn btn-primary" href="{% url 'book' %}">Make another booking</a>
-        </nav>
-    </header>
+{% extends 'bookings/base.html' %}
+{% load static %}
 
-    <main>
-        <h2>Thank you!</h2>
-        <p>Your booking has been confirmed. We will contact you at the provided phone number if needed.</p>
-    </main>
+{% block title %}Booking Confirmed{% endblock %}
 
-    <footer class="footer">© {{ now|date:"Y" }} Salon</footer>
-</body>
-</html>
+{% block content %}
+<div class="success-container">
+    <h2>Thank you!</h2>
+    <p>Your booking has been confirmed. We will contact you at the provided phone number if needed.</p>
+    
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li class="message {{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <div class="success-actions">
+        <a class="btn btn-primary" href="{% url 'book' %}">Make another booking</a>
+        <a class="btn" href="{% url 'home' %}">Back to home</a>
+    </div>
+</div>
+
+<style>
+.success-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.success-container h2 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.success-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.message {
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+</style>
+{% endblock %}
 
 
 

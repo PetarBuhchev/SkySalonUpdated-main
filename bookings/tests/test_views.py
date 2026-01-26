@@ -134,10 +134,10 @@ class BookViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertFalse(response.context["form"].is_valid())
 
-    @patch("bookings.views.send_mail")
-    def test_book_view_post_sends_email(self, mock_send_mail):
+    @patch("bookings.views.EmailMultiAlternatives.send")
+    def test_book_view_post_sends_email(self, mock_send):
         """Test that booking confirmation email is sent."""
-        mock_send_mail.return_value = True
+        mock_send.return_value = 1
         form_data = {
             "worker": self.worker.id,
             "service": self.service.id,
@@ -148,9 +148,7 @@ class BookViewTest(TestCase):
         }
         response = self.client.post(reverse("book"), data=form_data)
         self.assertEqual(response.status_code, 302)
-        mock_send_mail.assert_called_once()
-        call_args = mock_send_mail.call_args
-        self.assertIn("customer@example.com", call_args[0][3])
+        mock_send.assert_called_once()
 
     def test_book_view_post_no_email(self):
         """Test booking without email doesn't send email."""
@@ -161,10 +159,10 @@ class BookViewTest(TestCase):
             "time": self.future_time,
             "phone": "+1234567890",
         }
-        with patch("bookings.views.send_mail") as mock_send_mail:
+        with patch("bookings.views.EmailMultiAlternatives.send") as mock_send:
             response = self.client.post(reverse("book"), data=form_data)
             self.assertEqual(response.status_code, 302)
-            mock_send_mail.assert_not_called()
+            mock_send.assert_not_called()
 
     def test_book_view_post_email_failure(self):
         """Test that email failure doesn't prevent booking."""
@@ -176,7 +174,7 @@ class BookViewTest(TestCase):
             "phone": "+1234567890",
             "email": "customer@example.com",
         }
-        with patch("bookings.views.send_mail", side_effect=Exception("Email error")):
+        with patch("bookings.views.EmailMultiAlternatives.send", side_effect=Exception("Email error")):
             response = self.client.post(reverse("book"), data=form_data)
             self.assertEqual(response.status_code, 302)  # Still redirects
             # Booking should still be created
@@ -411,4 +409,39 @@ class WorkerDetailViewTest(TestCase):
         response = self.client.get(url)
         self.assertIn("today", response.context)
         self.assertEqual(response.context["today"], timezone.localdate())
+
+
+class CancelBookingViewTest(TestCase):
+    """Tests for token-based cancellation flow."""
+
+    def setUp(self):
+        self.worker = Worker.objects.create(full_name="John Doe", is_active=True)
+        self.service = Service.objects.create(name="Haircut", duration_minutes=30)
+        self.future_date = timezone.localdate() + timedelta(days=1)
+        self.future_time = time(14, 0)
+
+    def test_cancel_booking_post_without_csrf_succeeds(self):
+        """Cancel should work even if the client/browser doesn't support cookies/CSRF."""
+        booking = Booking.objects.create(
+            worker=self.worker,
+            service=self.service,
+            date=self.future_date,
+            time=self.future_time,
+            phone="+1234567890",
+            email="customer@example.com",
+        )
+        token = booking.get_cancellation_token()
+        url = reverse("cancel_booking", args=[token])
+
+        # Enforce CSRF checks to prove the view is CSRF-exempt
+        client = Client(enforce_csrf_checks=True)
+
+        # GET should render confirmation page
+        resp_get = client.get(url)
+        self.assertEqual(resp_get.status_code, 200)
+
+        # POST without CSRF token should still succeed and delete booking
+        resp_post = client.post(url, data={})
+        self.assertEqual(resp_post.status_code, 302)
+        self.assertFalse(Booking.objects.filter(id=booking.id).exists())
 

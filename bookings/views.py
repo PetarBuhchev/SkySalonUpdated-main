@@ -9,6 +9,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
 from django.template.loader import render_to_string
+from django.views.decorators.csrf import csrf_exempt
 
 from datetime import datetime, timedelta, date as date_cls, time as time_cls
 import calendar
@@ -51,6 +52,7 @@ def book(request):
                 },
             )
             # Send confirmation email if provided
+            email_message_added = False
             if booking.email:
                 logger.info(
                     "Sending booking confirmation email",
@@ -93,13 +95,64 @@ def book(request):
                 msg.attach_alternative(html_content, "text/html")
                 
                 try:
-                    msg.send(fail_silently=True)
-                except Exception:
+                    # Check if we're using console backend (development mode)
+                    if settings.EMAIL_BACKEND == "django.core.mail.backends.console.EmailBackend":
+                        logger.warning(
+                            "Email backend is set to console - emails will be printed to console, not sent",
+                            extra={
+                                "booking_id": booking.id,
+                                "email": booking.email,
+                                "hint": "Set EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend and provide EMAIL_HOST_USER and EMAIL_HOST_PASSWORD",
+                            },
+                        )
+                        messages.warning(
+                            request,
+                            "Email configuration not set. Confirmation email was not sent. "
+                            "Please contact us if you need booking details."
+                        )
+                        email_message_added = True
+                    else:
+                        result = msg.send(fail_silently=False)
+                        if result:
+                            logger.info(
+                                "Booking confirmation email sent successfully",
+                                extra={"booking_id": booking.id, "email": booking.email},
+                            )
+                            messages.success(
+                                request,
+                                f"Confirmation email sent to {booking.email}"
+                            )
+                            email_message_added = True
+                        else:
+                            logger.warning(
+                                "Booking confirmation email send returned 0",
+                                extra={"booking_id": booking.id, "email": booking.email},
+                            )
+                            messages.warning(
+                                request,
+                                "Booking confirmed, but email could not be sent. Please check your email address."
+                            )
+                            email_message_added = True
+                except Exception as e:
                     logger.exception(
                         "Failed to send booking confirmation email",
-                        extra={"booking_id": booking.id, "email": booking.email},
+                        extra={
+                            "booking_id": booking.id,
+                            "email": booking.email,
+                            "error": str(e),
+                            "email_backend": settings.EMAIL_BACKEND,
+                        },
                     )
-            messages.success(request, "Your booking is confirmed.")
+                    messages.warning(
+                        request,
+                        "Booking confirmed, but email could not be sent. Please contact us if you need booking details."
+                    )
+                    email_message_added = True
+                    # Don't fail the booking if email fails, but log it
+            
+            # Main success message (only show if we didn't already add an email-related message)
+            if not email_message_added:
+                messages.success(request, "Your booking is confirmed.")
             logger.info(
                 "Booking process completed successfully",
                 extra={
@@ -117,12 +170,15 @@ def book(request):
                 },
             )
     else:
-        # Prefill from query parameters if provided
+        # Prefill from query parameters if provided, otherwise show empty form
         initial: dict[str, object] = {}
         worker_id = request.GET.get("worker")
         date_param = request.GET.get("date")
         time_param = request.GET.get("time")
         service_id = request.GET.get("service")
+        
+        # Only prefill if query parameters are explicitly provided
+        # This ensures "Make another booking" shows a fresh form
         if worker_id:
             initial["worker"] = worker_id
         if service_id:
@@ -131,38 +187,44 @@ def book(request):
             initial["date"] = date_param
         if time_param:
             initial["time"] = time_param
-        form = BookingForm(initial=initial)
+        
+        form = BookingForm(initial=initial if initial else None)
 
     # Derive selected worker/service/date/time for summary display
+    # Only show summary if query parameters were provided (not for fresh bookings)
     selected_worker = None
     selected_service = None
     selected_date = None
     selected_time = None
     calendar_month = None
 
-    try:
-        worker_value = form["worker"].value()
-        if worker_value:
-            selected_worker = Worker.objects.filter(id=worker_value).first()
-        service_value = form["service"].value()
-        if service_value:
-            selected_service = Service.objects.filter(id=service_value).first()
-        date_value = form["date"].value()
-        if date_value:
-            selected_date = datetime.fromisoformat(date_value).date()
-        time_value = form["time"].value()
-        if time_value:
-            # time input is HH:MM[:ss]
-            selected_time = datetime.fromisoformat(f"2000-01-01T{time_value}").time()
-        if selected_date:
-            calendar_month = selected_date.replace(day=1).strftime("%Y-%m")
-    except Exception:
-        # If anything goes wrong with parsing, just skip the summary
-        selected_worker = None
-        selected_service = None
-        selected_date = None
-        selected_time = None
-        calendar_month = None
+    # Only populate summary if we have query parameters (coming from calendar)
+    has_query_params = bool(request.GET.get("worker") or request.GET.get("service") or request.GET.get("date") or request.GET.get("time"))
+    
+    if has_query_params:
+        try:
+            worker_value = form["worker"].value()
+            if worker_value:
+                selected_worker = Worker.objects.filter(id=worker_value).first()
+            service_value = form["service"].value()
+            if service_value:
+                selected_service = Service.objects.filter(id=service_value).first()
+            date_value = form["date"].value()
+            if date_value:
+                selected_date = datetime.fromisoformat(date_value).date()
+            time_value = form["time"].value()
+            if time_value:
+                # time input is HH:MM[:ss]
+                selected_time = datetime.fromisoformat(f"2000-01-01T{time_value}").time()
+            if selected_date:
+                calendar_month = selected_date.replace(day=1).strftime("%Y-%m")
+        except Exception:
+            # If anything goes wrong with parsing, just skip the summary
+            selected_worker = None
+            selected_service = None
+            selected_date = None
+            selected_time = None
+            calendar_month = None
 
     return render(
         request,
@@ -391,6 +453,7 @@ def worker_detail(request, worker_id: int):
     })
 
 
+@csrf_exempt
 def cancel_booking(request, token: str):
     """Cancel a booking using a secure token."""
     booking = Booking.from_cancellation_token(token)

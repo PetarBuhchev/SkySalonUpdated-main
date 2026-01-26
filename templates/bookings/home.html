@@ -1,6 +1,16 @@
 {% extends 'bookings/base.html' %}
 
 {% block content %}
+{% if messages %}
+<div class="messages-container" style="max-width: 1100px; margin: 20px auto; padding: 0 20px;">
+    <ul class="messages">
+        {% for message in messages %}
+        <li class="message {{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
 <section class="hero hero-bg hero-lg hero-home reveal-onload">
     <div class="hero-content">
         <h2>Modern hairstyles, crafted with care</h2>

@@ -14,6 +14,10 @@ staticfiles/
 .venv/
 venv/
 
+# Local helper scripts that may contain credentials (keep local, don't commit)
+start_server.ps1
+start_server.bat
+
 # Logs
 logs/
 logs/*.log
