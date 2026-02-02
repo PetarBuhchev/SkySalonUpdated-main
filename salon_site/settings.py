@@ -16,6 +16,15 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-insecure-change-me")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 ALLOWED_HOSTS: list[str] = ["*"]
 
+# ADD THIS NEW SECTION:
+CSRF_TRUSTED_ORIGINS = [
+    "https://skysalon.azurewebsites.net",
+]
+
+# OPTIONAL BUT RECOMMENDED FOR AZURE:
+# This tells Django to trust that Azure is handling the HTTPS security
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
