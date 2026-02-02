@@ -15,14 +15,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-insecure-change-me")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 ALLOWED_HOSTS: list[str] = ["*"]
-# ADD THIS NEW SECTION:
-CSRF_TRUSTED_ORIGINS = [
-    "https://skysalon.azurewebsites.net",
-]
-
-# OPTIONAL BUT RECOMMENDED FOR AZURE:
-# This tells Django to trust that Azure is handling the HTTPS security
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -78,11 +70,21 @@ DATABASES = {
 # Use SMTP backend if email credentials are provided, otherwise use console backend for development
 has_email_credentials = bool(os.environ.get("EMAIL_HOST_USER") and os.environ.get("EMAIL_HOST_PASSWORD"))
 default_email_backend = "django.core.mail.backends.smtp.EmailBackend" if has_email_credentials else "django.core.mail.backends.console.EmailBackend"
-EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND", default_email_backend)
-EMAIL_HOST = os.environ.get("EMAIL_HOST", "smtp.gmail.com")
-EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+
+
+# settings.py
+
+# ... other settings ...
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# THIS IS THE IMPORTANT PART:
+# We use os.environ.get to read from Azure, not from this file.
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "1") == "1"
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", EMAIL_HOST_USER or "noreply@salon.local")
 
