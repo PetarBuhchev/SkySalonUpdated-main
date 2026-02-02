@@ -14,15 +14,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-insecure-change-me")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
-ALLOWED_HOSTS: list[str] = ["*"]
+ALLOWED_HOSTS =  ["*"]
 
-# ADD THIS NEW SECTION:
+# ADD THIS SECTION:
 CSRF_TRUSTED_ORIGINS = [
     "https://skysalon.azurewebsites.net",
 ]
 
-# OPTIONAL BUT RECOMMENDED FOR AZURE:
-# This tells Django to trust that Azure is handling the HTTPS security
+# Optional: Helps Django know it's secure behind Azure's proxy
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = [
